@@ -20,23 +20,19 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="安装node.js选择长期支持版本的最新版本下载即可，下载网址： https:&#x2F;&#x2F;nodejs.org&#x2F;en&#x2F;           下载安装Git for Windows选择最新的版本下载即可，Github下载地址： https:&#x2F;&#x2F;github.com&#x2F;git-for-windows&#x2F;git&#x2F;releases&#x2F;          或者是从Git for Windows 官网下载： http">
+  <meta name="description" content="SIFT算法的特点有：  SIFT特征是图像的局部特征，其对旋转、尺度缩放、亮度变化保持不变性，对视角变化、仿射变换、噪声也保持一定程度的稳定性；  独特性（Distinctiveness）好，信息量丰富，适用于在海量特征数据库中进行快速、准确的匹配；  多量性，即使少数的几个物体也可以产生大量的SIFT特征向量；  高速性，经优化的SIFT匹配算法甚至可以达到实时的要求；  可扩展性，">
 <meta property="og:type" content="article">
-<meta property="og:title" content="基于Github的博客设置">
-<meta property="og:url" content="http://example.com/2022/09/26/002-compute_seting/%E6%90%AD%E5%BB%BA%E5%9F%BA%E4%BA%8Egithub%E7%9A%84%E5%8D%9A%E5%AE%A2/index.html">
+<meta property="og:title" content="SIFT算法笔记（1）">
+<meta property="og:url" content="http://example.com/2022/09/26/003-slam/SIFT/index.html">
 <meta property="og:site_name" content="Hexo Blog">
-<meta property="og:description" content="安装node.js选择长期支持版本的最新版本下载即可，下载网址： https:&#x2F;&#x2F;nodejs.org&#x2F;en&#x2F;           下载安装Git for Windows选择最新的版本下载即可，Github下载地址： https:&#x2F;&#x2F;github.com&#x2F;git-for-windows&#x2F;git&#x2F;releases&#x2F;          或者是从Git for Windows 官网下载： http">
+<meta property="og:description" content="SIFT算法的特点有：  SIFT特征是图像的局部特征，其对旋转、尺度缩放、亮度变化保持不变性，对视角变化、仿射变换、噪声也保持一定程度的稳定性；  独特性（Distinctiveness）好，信息量丰富，适用于在海量特征数据库中进行快速、准确的匹配；  多量性，即使少数的几个物体也可以产生大量的SIFT特征向量；  高速性，经优化的SIFT匹配算法甚至可以达到实时的要求；  可扩展性，">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://example.com/2022/09/26/pic/002-compute_setting/001-blog/001-node官网下载.png">
-<meta property="og:image" content="http://example.com/2022/09/26/pic/002-compute_setting/001-blog/002-Git从github下载.png">
-<meta property="og:image" content="http://example.com/2022/09/26/pic/002-compute_setting/001-blog/003-Git从官网下载.png">
 <meta property="article:published_time" content="2022-09-25T16:00:00.000Z">
-<meta property="article:modified_time" content="2022-09-29T15:07:43.001Z">
+<meta property="article:modified_time" content="2022-09-29T15:07:47.613Z">
 <meta property="article:author" content="杜永喆">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/2022/09/26/pic/002-compute_setting/001-blog/001-node官网下载.png">
 
-<link rel="canonical" href="http://example.com/2022/09/26/002-compute_seting/%E6%90%AD%E5%BB%BA%E5%9F%BA%E4%BA%8Egithub%E7%9A%84%E5%8D%9A%E5%AE%A2/">
+<link rel="canonical" href="http://example.com/2022/09/26/003-slam/SIFT/">
 
 
 <script id="page-configurations">
@@ -49,7 +45,7 @@
   };
 </script>
 
-  <title>基于Github的博客设置 | Hexo Blog</title>
+  <title>SIFT算法笔记（1） | Hexo Blog</title>
   
 
 
@@ -159,7 +155,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/26/002-compute_seting/%E6%90%AD%E5%BB%BA%E5%9F%BA%E4%BA%8Egithub%E7%9A%84%E5%8D%9A%E5%AE%A2/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/26/003-slam/SIFT/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -172,7 +168,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          基于Github的博客设置
+          SIFT算法笔记（1）
         </h1>
 
         <div class="post-meta">
@@ -189,7 +185,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-09-29 23:07:43" itemprop="dateModified" datetime="2022-09-29T23:07:43+08:00">2022-09-29</time>
+                <time title="Modified: 2022-09-29 23:07:47" itemprop="dateModified" datetime="2022-09-29T23:07:47+08:00">2022-09-29</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -197,7 +193,7 @@
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%8D%9A%E5%AE%A2/" itemprop="url" rel="index"><span itemprop="name">博客</span></a>
+                  <a href="/categories/SLAM/" itemprop="url" rel="index"><span itemprop="name">SLAM</span></a>
                 </span>
             </span>
 
@@ -213,31 +209,73 @@
 
       
         <font size=5>
+
 <font face="仿宋_GB2312">
 
-<h2 id="安装node-js"><a href="#安装node-js" class="headerlink" title="安装node.js"></a>安装node.js</h2><p>选择长期支持版本的最新版本下载即可，<a target="_blank" rel="noopener" href="https://nodejs.org/en/">下载网址</a>：</p>
-<pre><code>https://nodejs.org/en/
-</code></pre>
-<div align=center>
-    <img src="../../pic/002-compute_setting/001-blog/001-node官网下载.png">
-</div>
+
+<p>SIFT算法的特点有：</p>
+<ol>
+<li><p>SIFT特征是图像的局部特征，其对旋转、尺度缩放、亮度变化保持不变性，对视角变化、仿射变换、噪声也保持一定程度的稳定性；</p>
+</li>
+<li><p>独特性（Distinctiveness）好，信息量丰富，适用于在海量特征数据库中进行快速、准确的匹配；</p>
+</li>
+<li><p>多量性，即使少数的几个物体也可以产生大量的SIFT特征向量；</p>
+</li>
+<li><p>高速性，经优化的SIFT匹配算法甚至可以达到实时的要求；</p>
+</li>
+<li><p>可扩展性，可以很方便的与其他形式的特征向量进行联合。</p>
+</li>
+</ol>
+<p>SIFT算法可以解决的问题：</p>
+<p>目标的自身状态、场景所处的环境和成像器材的成像特性等因素影响图像配准/目标识别跟踪的性能。而SIFT算法在一定程度上可解决：</p>
+<ol>
+<li><p>目标的旋转、缩放、平移（RST）</p>
+</li>
+<li><p>图像仿射/投影变换（视点viewpoint）</p>
+</li>
+<li><p>光照影响（illumination）</p>
+</li>
+<li><p>目标遮挡（occlusion）</p>
+</li>
+<li><p>杂物场景（clutter）</p>
+</li>
+<li><p>噪声 </p>
+</li>
+</ol>
+<p>SIFT算法的实质是在不同的尺度空间上查找关键点(特征点)，并计算出关键点的方向。SIFT所查找到的关键点是一些十分突出，不会因光照，仿射变换和噪音等因素而变化的点，如角点、边缘点、暗区的亮点及亮区的暗点等。</p>
+<p>Lowe将SIFT算法分解为如下四步：</p>
+<ol>
+<li><p>尺度空间极值检测：搜索所有尺度上的图像位置。通过高斯微分函数来识别潜在的对于尺度和旋转不变的兴趣点。</p>
+</li>
+<li><p>关键点定位：在每个候选的位置上，通过一个拟合精细的模型来确定位置和尺度。关键点的选择依据于它们的稳定程度。</p>
+</li>
+<li><p>方向确定：基于图像局部的梯度方向，分配给每个关键点位置一个或多个方向。所有后面的对图像数据的操作都相对于关键点的方向、尺度和位置进行变换，从而提供对于这些变换的不变性。</p>
+</li>
+<li><p>关键点描述：在每个关键点周围的邻域内，在选定的尺度上测量图像局部的梯度。这些梯度被变换成一种表示，这种表示允许比较大的局部形状的变形和光照变化。</p>
+</li>
+</ol>
+<p>本文沿着Lowe的步骤，参考Rob Hess及Andrea Vedaldi源码，详解SIFT算法的实现过程。</p>
+<p>2.SIFT核心算法——computeKeypointsAndDescriptors<br>computeKeypointsAndDescriptors就是SIFT的核心部分，可以细分为以下几步：</p>
+<p>2.1 generateBaseImage：生成基础图像（放大2倍，模糊化）</p>
+<p>2.2 computeNumberOfOctaves：计算高斯金字塔里有多少组图像</p>
+<p>2.3 generateGaussianKernels：生成构建高斯金字塔的滤波器</p>
+<p>2.4 generateGaussianImages：生成高斯金字塔</p>
+<p>2.5 generateDoGImages：生成高斯差分金字塔</p>
+<p>2.6 findScaleSpaceExtrema：寻找尺度空间的极值点</p>
+<p>2.7 removeDuplicateKeypoints：移除冗余的关键点</p>
+<p>2.8 convertKeypointsToInputImageSize：将关键点位置转换到原图的位置</p>
+<p>2.9 generateDescriptors：关键点生成描述符，供后续相似度的计算</p>
+<p>高斯金字塔是指通过高斯模糊滤波和下采样不断地将图像的尺寸缩小，进而在金字塔中包含多个分辨率的一组图像。</p>
+<p>一般情况下，高斯金字塔的最底层为原图像，每向上一层就会通过高斯模糊滤波+下采样缩小一次图像的尺寸。<br>通常情况下，图像的长与宽会缩小为原来的一半，由于每次图像的长与宽都缩小为原来的一半，图像的缩小速度非常快，因此常见的高斯金字塔的层数为3~6。</p>
+<p>在OpenCV中提供了函数pyrDown()，用于生成图像的上一层高斯金字塔。<br>函数pyrDown()的原型如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">src—输入图像</span><br><span class="line">dst—输出图像，它的宽度和高度大致为src的1/2 ，具体精确的大小由第三个参数dstsize决定。</span><br><span class="line">dstsize—目标图像的大小，默认值为Size((src.cols+1)/2, (src.rows+1)/2)，自己指定时需要满足以下条件。</span><br><span class="line"></span><br><span class="line">void cv::pyrDown(	InputArray 	src,</span><br><span class="line">					OutputArray 	dst,</span><br><span class="line">					const Size &amp; 	dstsize = Size(),</span><br><span class="line">					int 	borderType = BORDER_DEFAULT </span><br><span class="line">				)	</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 
-<h2 id="下载安装Git-for-Windows"><a href="#下载安装Git-for-Windows" class="headerlink" title="下载安装Git for Windows"></a>下载安装Git for Windows</h2><p>选择最新的版本下载即可，<a target="_blank" rel="noopener" href="https://github.com/git-for-windows/gitreleases/">Github下载地址</a>：</p>
-<pre><code>https://github.com/git-for-windows/git/releases/
-</code></pre>
-<div align=center>
-    <img src="../../pic/002-compute_setting/001-blog/002-Git从github下载.png">
-</div>
 
-<p>或者是从<a target="_blank" rel="noopener" href="https://gitforwindows.org/">Git for Windows 官网下载</a>：</p>
-<pre><code>https://gitforwindows.org/
-</code></pre>
-<div align=center>
-    <img src="../../pic/002-compute_setting/001-blog/003-Git从官网下载.png">
-</div>
 
-<h2 id="HEXO安装"><a href="#HEXO安装" class="headerlink" title="HEXO安装"></a>HEXO安装</h2></font>
+
+
+</font>
 </font>
     </div>
 
@@ -253,10 +291,13 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2022/09/26/003-slam/SIFT/" rel="prev" title="SIFT算法笔记（1）">
-      <i class="fa fa-chevron-left"></i> SIFT算法笔记（1）
+    <a href="/2022/09/26/003-slam/SuperGluePretrainedNetwork/" rel="prev" title="superglue论文笔记">
+      <i class="fa fa-chevron-left"></i> superglue论文笔记
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2022/09/26/002-compute_seting/%E6%90%AD%E5%BB%BA%E5%9F%BA%E4%BA%8Egithub%E7%9A%84%E5%8D%9A%E5%AE%A2/" rel="next" title="基于Github的博客设置">
+      基于Github的博客设置 <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -315,7 +356,6 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85node-js"><span class="nav-number">1.</span> <span class="nav-text">安装node.js</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85Git-for-Windows"><span class="nav-number">2.</span> <span class="nav-text">下载安装Git for Windows</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HEXO%E5%AE%89%E8%A3%85"><span class="nav-number">3.</span> <span class="nav-text">HEXO安装</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
