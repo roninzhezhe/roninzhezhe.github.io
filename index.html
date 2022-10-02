@@ -486,7 +486,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-10-02 20:36:24" itemprop="dateModified" datetime="2022-10-02T20:36:24+08:00">2022-10-02</time>
+                <time title="Modified: 2022-10-02 20:40:40" itemprop="dateModified" datetime="2022-10-02T20:40:40+08:00">2022-10-02</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -618,9 +618,43 @@
 </div>
 
 <p>在Git中执行：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight plaintext"><figcaption><span>g```是generate编译生成项目的意思</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line">```hexo s```是serve创建本地服务器的意思</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;div align=center&gt;</span><br><span class="line">    &lt;img src=&quot;/pic/002-compute_setting/001-blog/013-编译next文件夹serve.png&quot;&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">最后生成了一个本地的服务器，并输出了访问地址：</span><br><span class="line"></span><br><span class="line">    http://localhost:4000</span><br><span class="line"></span><br><span class="line">然后在浏览器中打开这个本地网址就可以看到现在的工程编译后什么样子了。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#### Vscode中配置与编辑博客</span><br><span class="line"></span><br><span class="line">编译好上传之后，主页上显示的内容是```source\_posts```文件夹中的所有md文件的编译汇总，而且无论在哪一个子目录下，都会编译上传。所以可以在```source```文件夹中建立几个子文件夹用来存编写博客用到的图片等资源:</span><br><span class="line"></span><br><span class="line">&lt;div align=center&gt;</span><br><span class="line">    &lt;img src=&quot;/pic/002-compute_setting/001-blog/015-vscode_next编辑的文件夹位置.png&quot;&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">然后在Vscode中直接打开整个```source```文件夹作为项目：</span><br><span class="line"></span><br><span class="line">&lt;div align=center&gt;</span><br><span class="line">    &lt;img src=&quot;/pic/002-compute_setting/001-blog/016-vscode打开的文件夹项目.png&quot;&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">然后就可以打开md文件，在vscode中编辑啦！</span><br><span class="line"></span><br><span class="line">#### Github中的部署</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">首先是要在Github上登录自己的账户，GitHub的用户名不能包含汉字等特殊字符，要不然不可以用。</span><br><span class="line"></span><br><span class="line">首先建立一个Github仓库：</span><br><span class="line"></span><br><span class="line">&lt;div align=center&gt;</span><br><span class="line">    &lt;img src=&quot;/pic/002-compute_setting/001-blog/017-新建Github仓库.png&quot;&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;div align=center&gt;</span><br><span class="line">    &lt;img src=&quot;/pic/002-compute_setting/001-blog/018-新建Github仓库配置.png&quot;&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">同时在自己项目的```\hexo\_config.yml```</span><br><span class="line"></span><br><span class="line">设置提交地址：</span><br><span class="line"></span><br><span class="line">```yaml</span><br><span class="line"># Deployment</span><br><span class="line">## Docs: https://hexo.io/docs/one-command-deployment</span><br><span class="line">deploy:</span><br><span class="line">  type: &#x27;git&#x27;</span><br><span class="line">  repository: git@github.com:github用户名/github用户名.github.io.git</span><br><span class="line">  branch: main或者master</span><br></pre></td></tr></table></figure>
+<p>其中<code>hexo g</code>是generate编译生成项目的意思，<code>hexo s</code>是serve创建本地服务器的意思</p>
+<div align=center>
+    <img src="/pic/002-compute_setting/001-blog/013-编译next文件夹serve.png">
+</div>
+
+<p>最后生成了一个本地的服务器，并输出了访问地址：</p>
+<pre><code>http://localhost:4000
+</code></pre>
+<p>然后在浏览器中打开这个本地网址就可以看到现在的工程编译后什么样子了。</p>
+<h4 id="Vscode中配置与编辑博客"><a href="#Vscode中配置与编辑博客" class="headerlink" title="Vscode中配置与编辑博客"></a>Vscode中配置与编辑博客</h4><p>编译好上传之后，主页上显示的内容是<code>source\_posts</code>文件夹中的所有md文件的编译汇总，而且无论在哪一个子目录下，都会编译上传。所以可以在<code>source</code>文件夹中建立几个子文件夹用来存编写博客用到的图片等资源:</p>
+<div align=center>
+    <img src="/pic/002-compute_setting/001-blog/015-vscode_next编辑的文件夹位置.png">
+</div>
+
+<p>然后在Vscode中直接打开整个<code>source</code>文件夹作为项目：</p>
+<div align=center>
+    <img src="/pic/002-compute_setting/001-blog/016-vscode打开的文件夹项目.png">
+</div>
+
+<p>然后就可以打开md文件，在vscode中编辑啦！</p>
+<h4 id="Github中的部署"><a href="#Github中的部署" class="headerlink" title="Github中的部署"></a>Github中的部署</h4><p>首先是要在Github上登录自己的账户，GitHub的用户名不能包含汉字等特殊字符，要不然不可以用。</p>
+<p>首先建立一个Github仓库：</p>
+<div align=center>
+    <img src="/pic/002-compute_setting/001-blog/017-新建Github仓库.png">
+</div>
+
+<div align=center>
+    <img src="/pic/002-compute_setting/001-blog/018-新建Github仓库配置.png">
+</div>
+
+
+
+<p>同时在自己项目的<code>\hexo\_config.yml</code></p>
+<p>设置提交地址：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: https://hexo.io/docs/one-command-deployment</span></span><br><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">&#x27;git&#x27;</span></span><br><span class="line">  <span class="attr">repository:</span> <span class="string">git@github.com:github用户名/github用户名.github.io.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">main或者master</span></span><br></pre></td></tr></table></figure>
 
 <p>注意<code>repository</code>的地址，一定是要设置为这种格式，将；<br>以及<code>branch</code>要和最终在GitHub中设置的分支保持一致。</p>
 <p>我设置的是：</p>
@@ -660,7 +694,7 @@
 <h4 id="Git编译上传以及打开自建的博客网站"><a href="#Git编译上传以及打开自建的博客网站" class="headerlink" title="Git编译上传以及打开自建的博客网站"></a>Git编译上传以及打开自建的博客网站</h4><p>反回Git bash，输入命令：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
 
-<p><code>hexo d</code>代表deployed，部署的意思，意义就是部署到Github的仓库中，上传之后会有一段时间（大概两分钟），Github处理上传的文件并形成网站，随后可以打开网址：</p>
+<p><code>hexo d</code>代表deploy，部署的意思，意义就是部署到Github的仓库中，上传之后会有一段时间（大概两分钟），Github处理上传的文件并形成网站，随后可以打开网址：</p>
 <pre><code>https://github用户名.github.io/
 </code></pre>
 <p>看到自己的个人博客啦！</p>
