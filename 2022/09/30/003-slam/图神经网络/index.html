@@ -28,7 +28,7 @@
 <meta property="og:description" content="MathJax.Hub.Config({             tex2jax: {             skipTags: [&#39;script&#39;, &#39;noscript&#39;, &#39;style&#39;, &#39;textarea&#39;, &#39;pre&#39;],             inlineMath: [[&#39;$&#39;,&#39;$&#39;]]             }         });">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-09-29T16:00:00.000Z">
-<meta property="article:modified_time" content="2022-09-30T12:25:12.911Z">
+<meta property="article:modified_time" content="2022-09-30T13:30:33.551Z">
 <meta property="article:author" content="杜永喆">
 <meta name="twitter:card" content="summary">
 
@@ -179,7 +179,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2022-09-30 00:00:00 / Modified: 20:25:12" itemprop="dateCreated datePublished" datetime="2022-09-30T00:00:00+08:00">2022-09-30</time>
+              <time title="Created: 2022-09-30 00:00:00 / Modified: 21:30:33" itemprop="dateCreated datePublished" datetime="2022-09-30T00:00:00+08:00">2022-09-30</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -234,29 +234,35 @@
 7. 将权重值相加，得到输出1
 8. 对输入2和输入3重复步骤4-7
 </code></pre>
-<p>假设现在有一个句子$(s_1,s_2,s_3)$,$v$是$s$的转置；<br>第一个词和每一个词的内积,相似度越大,结果越大 $(s_1v_1, s_1v_2, s_1v_3)$<br>第二个词和每一个词的内积 $(s_2v_1 ,s_2v_1, s_2v_3)$<br>第三个词和每一个词的内积 $(s_3v_1, s_3v_2, s_3v_3)$</p>
+<p>假设现在有一个句子<font size=3>$(s_1,s_2,s_3)$</font>,<font size=3>$v$</font>是<font size=3>$s$</font>的转置；<br>第一个词和每一个词的内积,相似度越大,结果越大 <font size=3>$(s_1v_1, s_1v_2, s_1v_3)$</font></p>
+<p>第二个词和每一个词的内积 <font size=3>$(s_2v_1 ,s_2v_1, s_2v_3)$</font></p>
+<p>第三个词和每一个词的内积 <font size=3>$(s_3v_1, s_3v_2, s_3v_3)$</font></p>
 <p>横向在每一行中做softmax：</p>
 <div align=center>
+<font size=3>
 
-<p>$Softmax(s_1v_1, s_1v_2, s_1v_3)=(a_{11} ,a_{12},a_{13})$</p>
+<p>$Softmax(s_1v_1, s_1v_2, s_1v_3)=(a_{11} ,a_{12},a_{13})$<br></font></p>
 </div>
 
 <p>根据注意力矩阵求和</p>
 <div align=center>
+<font size=3>
 
-<p>$c_1 = a_{11}s_1+a_{21}s_2+a_{31}s_3$<br>$c_2 = a_{21}s_1+a_{22}s_2+a_{32}s_3$<br>$c_3 = a_{31}s_1+a_{23}s_2+a_{33}s_3$</p>
+<p>$c_1 = a_{11}s_1+a_{21}s_2+a_{31}s_3$<br>$c_2 = a_{21}s_1+a_{22}s_2+a_{32}s_3$<br>$c_3 = a_{31}s_1+a_{23}s_2+a_{33}s_3$<br></font></p>
 </div>
 
 
 <h4 id="Softmax-函数"><a href="#Softmax-函数" class="headerlink" title="$Softmax$函数"></a>$Softmax$函数</h4><div align=center>
+<font size=3>
 
-<p>$Softmax(Z_i)=\frac{e^{z_i}}{\sum_{c=1}^{C}e^{z_c}}={e^{z_i}}/{\sum_{c=1}^{C}e^{z_c}}$</p>
+<p>$Softmax(Z_i)=\frac{e^{z_i}}{\sum_{c=1}^{C}e^{z_c}}={e^{z_i}}/{\sum_{c=1}^{C}e^{z_c}}$<br></font></p>
 </div>
 
 <p>&emsp;&emsp;指数函数曲线呈现递增趋势，最重要的是斜率逐渐增大，也就是说在x轴上一个很小的变化，可以导致y轴上很大的变化。这种函数曲线能够将输出的数值拉开距离。<br>&emsp;&emsp;指数函数的曲线斜率逐渐增大虽然能够将输出值拉开距离，但是也带来了缺点，当  值非常大的话，计算得到的数值也会变的非常大，数值可能会溢出。<br>&emsp;&emsp;当然针对数值溢出有其对应的优化方法，将每一个输出值减去输出值中最大的值。</p>
 <div align=center>
+<font size=3>
 
-<p>$D=Max(z_i)$<br>$Softmax(Z_i)={e^{z_i-D}}/{\sum_{c=1}^{C}e^{z_c-D}}$</p>
+<p>$D=Max(z_i)$<br>$Softmax(Z_i)={e^{z_i-D}}/{\sum_{c=1}^{C}e^{z_c-D}}$<br></font></p>
 </div>
 
 <p>TensorFlow提供的统一函数式接口为<del>（暂时不会TensorFlow）</del>：</p>
@@ -347,8 +353,8 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2022/09/26/002-compute_seting/%E6%90%AD%E5%BB%BA%E5%9F%BA%E4%BA%8Egithub%E7%9A%84%E5%8D%9A%E5%AE%A2/" rel="prev" title="基于Github的博客设置">
-      <i class="fa fa-chevron-left"></i> 基于Github的博客设置
+    <a href="/2022/09/30/004-matlab_plot/matlab%E7%BB%98%E5%9B%BE%E8%AE%BE%E7%BD%AE%E6%8A%80%E5%B7%A7/" rel="prev" title="图神经网络">
+      <i class="fa fa-chevron-left"></i> 图神经网络
     </a></div>
       <div class="post-nav-item"></div>
     </div>
@@ -423,14 +429,14 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-count">7</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
   </nav>

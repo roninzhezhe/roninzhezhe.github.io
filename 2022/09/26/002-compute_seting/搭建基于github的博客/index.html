@@ -30,8 +30,25 @@
 <meta property="og:image" content="http://example.com/pic/002-compute_setting/001-blog/001-node官网下载.png">
 <meta property="og:image" content="http://example.com/pic/002-compute_setting/001-blog/002-Git从github下载.png">
 <meta property="og:image" content="http://example.com/pic/002-compute_setting/001-blog/003-Git从官网下载.png">
+<meta property="og:image" content="http://example.com/pic/002-compute_setting/001-blog/008-hexo插件版本显示.png">
+<meta property="og:image" content="http://example.com/pic/002-compute_setting/001-blog/006-vscode安装插件.png">
+<meta property="og:image" content="http://example.com/pic/002-compute_setting/001-blog/006-vscode安装插件1.png">
+<meta property="og:image" content="http://example.com/pic/002-compute_setting/001-blog/006-vscode安装插件2.png">
+<meta property="og:image" content="http://example.com/pic/002-compute_setting/001-blog/007-vscode预览功能.png">
+<meta property="og:image" content="http://example.com/pic/002-compute_setting/001-blog/009-cmd切换盘符.png">
+<meta property="og:image" content="http://example.com/pic/002-compute_setting/001-blog/009-hexo文件夹结构.png">
+<meta property="og:image" content="http://example.com/pic/002-compute_setting/001-blog/010-next下载界面.png">
+<meta property="og:image" content="http://example.com/pic/002-compute_setting/001-blog/011-解压next文件夹.png">
+<meta property="og:image" content="http://example.com/pic/002-compute_setting/001-blog/014-更改theme主题为next.png">
+<meta property="og:image" content="http://example.com/pic/002-compute_setting/001-blog/012-编译next文件夹.png">
+<meta property="og:image" content="http://example.com/pic/002-compute_setting/001-blog/013-编译next文件夹git.png">
+<meta property="og:image" content="http://example.com/pic/002-compute_setting/001-blog/019-新建Github仓库地址配置.png">
+<meta property="og:image" content="http://example.com/pic/002-compute_setting/001-blog/019-新建Github仓库branch配置.png">
+<meta property="og:image" content="http://example.com/pic/002-compute_setting/001-blog/019-新建Github仓库page配置.png">
+<meta property="og:image" content="http://example.com/pic/002-compute_setting/001-blog/021-新建Github仓库ssh_key配置1.png">
+<meta property="og:image" content="http://example.com/pic/002-compute_setting/001-blog/022-新建Github仓库ssh_key配置2.png">
 <meta property="article:published_time" content="2022-09-25T16:00:00.000Z">
-<meta property="article:modified_time" content="2022-09-30T02:42:14.619Z">
+<meta property="article:modified_time" content="2022-10-02T12:36:24.881Z">
 <meta property="article:author" content="杜永喆">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/pic/002-compute_setting/001-blog/001-node官网下载.png">
@@ -189,7 +206,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-09-30 10:42:14" itemprop="dateModified" datetime="2022-09-30T10:42:14+08:00">2022-09-30</time>
+                <time title="Modified: 2022-10-02 20:36:24" itemprop="dateModified" datetime="2022-10-02T20:36:24+08:00">2022-10-02</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -215,7 +232,7 @@
         <font size=5>
 <font face="仿宋_GB2312">
 
-<h2 id="安装node-js"><a href="#安装node-js" class="headerlink" title="安装node.js"></a>安装node.js</h2><p>选择长期支持版本的最新版本下载即可，<a target="_blank" rel="noopener" href="https://nodejs.org/en/">下载网址</a>：</p>
+<h4 id="安装node-js"><a href="#安装node-js" class="headerlink" title="安装node.js"></a>安装node.js</h4><p>选择长期支持版本的最新版本下载即可，<a target="_blank" rel="noopener" href="https://nodejs.org/en/">下载网址</a>：</p>
 <pre><code>https://nodejs.org/en/
 </code></pre>
 <div align=center>
@@ -223,7 +240,7 @@
 </div>
 
 
-<h2 id="下载安装Git-for-Windows"><a href="#下载安装Git-for-Windows" class="headerlink" title="下载安装Git for Windows"></a>下载安装Git for Windows</h2><p>选择最新的版本下载即可，<a target="_blank" rel="noopener" href="https://github.com/git-for-windows/gitreleases/">Github下载地址</a>：</p>
+<h4 id="下载安装Git-for-Windows"><a href="#下载安装Git-for-Windows" class="headerlink" title="下载安装Git for Windows"></a>下载安装Git for Windows</h4><p>选择最新的版本下载即可，<a target="_blank" rel="noopener" href="https://github.com/git-for-windows/gitreleases/">Github下载地址</a>：</p>
 <pre><code>https://github.com/git-for-windows/git/releases/
 </code></pre>
 <div align=center>
@@ -237,7 +254,137 @@
     <img src="/pic/002-compute_setting/001-blog/003-Git从官网下载.png">
 </div>
 
-<h2 id="HEXO安装"><a href="#HEXO安装" class="headerlink" title="HEXO安装"></a>HEXO安装</h2></font>
+<h4 id="HEXO安装"><a href="#HEXO安装" class="headerlink" title="HEXO安装"></a>HEXO安装</h4><p>安装好node.js以及Git之后，才能执行Hexo的安装。<br>先运行windows的cmd<br>在命令行（cmd）中执行以下命令：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
+<p>执行安装命令可能会遇到下载比较慢的情况，建议开Clash梯子。</p>
+<p>安装无误，在cmd中输入</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo -v</span><br></pre></td></tr></table></figure>
+<p>会输出如下信息：</p>
+<div align=center>
+    <img src="/pic/002-compute_setting/001-blog/008-hexo插件版本显示.png">
+</div>
+
+<h4 id="Vscode插件安装"><a href="#Vscode插件安装" class="headerlink" title="Vscode插件安装"></a>Vscode插件安装</h4><p><a target="_blank" rel="noopener" href="https://code.visualstudio.com/">Vscode 官网</a></p>
+<pre><code>https://code.visualstudio.com/
+</code></pre>
+<p>安装3个插件就够了<br>Markdown All In One</p>
+<div align=center>
+    <img src="/pic/002-compute_setting/001-blog/006-vscode安装插件.png">
+</div>
+
+<p>Markdown Preview enhanced<br>构建实时预览的插件</p>
+<div align=center>
+    <img src="/pic/002-compute_setting/001-blog/006-vscode安装插件1.png">
+</div>
+
+
+<p>Markdown Preview Github Styling</p>
+<div align=center>
+    <img src="/pic/002-compute_setting/001-blog/006-vscode安装插件2.png">
+</div>
+
+<p>安装好上边的三个插件之后，需要重启Vscode才能正常使用其中的功能<br>重启之后打开md文件，然后右键选择</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[MEP:打开侧边预览]</span><br></pre></td></tr></table></figure>
+
+<div align=center>
+    <img src="/pic/002-compute_setting/001-blog/007-vscode预览功能.png">
+</div>
+
+<h4 id="基于Hexo的Next主题风格模板下载使用"><a href="#基于Hexo的Next主题风格模板下载使用" class="headerlink" title="基于Hexo的Next主题风格模板下载使用"></a>基于Hexo的Next主题风格模板下载使用</h4><p>基于Hexo框架的主题有很多，最受欢迎的是Next模板。<br>安装完成上述的包之后，打开windows的cmd执行：</p>
+<pre><code>npm install -g hexo-cli
+</code></pre>
+<p>然后在某一处新建一个文件夹，然后在cmd中cd进入此文件夹<br>注意在切换的时候，cmd默认进入的是C盘，切换盘符的命令比较特殊：<br>例如我想从C盘切换到我的D盘，执行以下命令：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd /d d:</span><br></pre></td></tr></table></figure>
+<p>得到如下的结果：</p>
+<div align=center>
+    <img src="/pic/002-compute_setting/001-blog/009-cmd切换盘符.png">
+</div>
+
+<p>我的文件夹建在了: <code>D:\user\Desktop\hexo</code>中,那我完整的执行流程就是：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /d d:</span><br><span class="line"><span class="built_in">cd</span> user\Desktop\hexo</span><br><span class="line">hexo init</span><br></pre></td></tr></table></figure>
+<p>注意在<code>hexo init</code>执行的时候要保证cmd的当前路径文件夹是空的。<br>至此基础的安装已经完成，如果之前没有错误就可以关掉cmd了。<br>得到的文件夹的结构应该是如下得样子：</p>
+<div align=center>
+    <img src="/pic/002-compute_setting/001-blog/009-hexo文件夹结构.png">
+</div>
+
+
+<p>然后就是去下载Next模板：<br><a target="_blank" rel="noopener" href="https://github.com/theme-next">Next模板下载地址:</a>：</p>
+<pre><code>https://github.com/theme-next
+</code></pre>
+<p>next项目中有好多分支，下载最多的是第一个，我也用的第一个。点击进去然后点code下载，得到它的压缩文件夹。</p>
+<div align=center>
+    <img src="/pic/002-compute_setting/001-blog/010-next下载界面.png">
+</div>
+
+<p>然后将下载的压缩包中的文件整体解压到<code>hexo\themes</code>文件夹中:</p>
+<div align=center>
+    <img src="/pic/002-compute_setting/001-blog/011-解压next文件夹.png">
+</div>
+
+<p>下载的next文件夹可能名字不是这个，这是我改了名字。</p>
+<p>然后将<code>\hexo\_config.yml</code>文件中的主题更改下：</p>
+<div align=center>
+    <img src="/pic/002-compute_setting/001-blog/014-更改theme主题为next.png">
+</div>
+
+<p>这个主题的名字应该是与theme中的文件夹的名字是一样的，没有试名字换了行不行。</p>
+<h4 id="Next的本地编译和预览"><a href="#Next的本地编译和预览" class="headerlink" title="Next的本地编译和预览"></a>Next的本地编译和预览</h4><p>编译需要在Git中完成，右键整体的文件夹，然后：</p>
+<div align=center>
+    <img src="/pic/002-compute_setting/001-blog/012-编译next文件夹.png">
+</div>
+
+<div align=center>
+    <img src="/pic/002-compute_setting/001-blog/013-编译next文件夹git.png">
+</div>
+
+<p>在Git中执行：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><figcaption><span>g```是generate编译生成项目的意思</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line">```hexo s```是serve创建本地服务器的意思</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;div align=center&gt;</span><br><span class="line">    &lt;img src=&quot;/pic/002-compute_setting/001-blog/013-编译next文件夹serve.png&quot;&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">最后生成了一个本地的服务器，并输出了访问地址：</span><br><span class="line"></span><br><span class="line">    http://localhost:4000</span><br><span class="line"></span><br><span class="line">然后在浏览器中打开这个本地网址就可以看到现在的工程编译后什么样子了。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#### Vscode中配置与编辑博客</span><br><span class="line"></span><br><span class="line">编译好上传之后，主页上显示的内容是```source\_posts```文件夹中的所有md文件的编译汇总，而且无论在哪一个子目录下，都会编译上传。所以可以在```source```文件夹中建立几个子文件夹用来存编写博客用到的图片等资源:</span><br><span class="line"></span><br><span class="line">&lt;div align=center&gt;</span><br><span class="line">    &lt;img src=&quot;/pic/002-compute_setting/001-blog/015-vscode_next编辑的文件夹位置.png&quot;&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">然后在Vscode中直接打开整个```source```文件夹作为项目：</span><br><span class="line"></span><br><span class="line">&lt;div align=center&gt;</span><br><span class="line">    &lt;img src=&quot;/pic/002-compute_setting/001-blog/016-vscode打开的文件夹项目.png&quot;&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">然后就可以打开md文件，在vscode中编辑啦！</span><br><span class="line"></span><br><span class="line">#### Github中的部署</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">首先是要在Github上登录自己的账户，GitHub的用户名不能包含汉字等特殊字符，要不然不可以用。</span><br><span class="line"></span><br><span class="line">首先建立一个Github仓库：</span><br><span class="line"></span><br><span class="line">&lt;div align=center&gt;</span><br><span class="line">    &lt;img src=&quot;/pic/002-compute_setting/001-blog/017-新建Github仓库.png&quot;&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;div align=center&gt;</span><br><span class="line">    &lt;img src=&quot;/pic/002-compute_setting/001-blog/018-新建Github仓库配置.png&quot;&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">同时在自己项目的```\hexo\_config.yml```</span><br><span class="line"></span><br><span class="line">设置提交地址：</span><br><span class="line"></span><br><span class="line">```yaml</span><br><span class="line"># Deployment</span><br><span class="line">## Docs: https://hexo.io/docs/one-command-deployment</span><br><span class="line">deploy:</span><br><span class="line">  type: &#x27;git&#x27;</span><br><span class="line">  repository: git@github.com:github用户名/github用户名.github.io.git</span><br><span class="line">  branch: main或者master</span><br></pre></td></tr></table></figure>
+
+<p>注意<code>repository</code>的地址，一定是要设置为这种格式，将；<br>以及<code>branch</code>要和最终在GitHub中设置的分支保持一致。</p>
+<p>我设置的是：</p>
+<div align=center>
+    <img src="/pic/002-compute_setting/001-blog/019-新建Github仓库地址配置.png">
+</div>
+
+
+<p>然后在github中进行Github Pages配置：</p>
+<p>首先是进去新建的repository，进行branch和page设置：</p>
+<div align=center>
+    <img src="/pic/002-compute_setting/001-blog/019-新建Github仓库branch配置.png">
+</div>
+
+<div align=center>
+    <img src="/pic/002-compute_setting/001-blog/019-新建Github仓库page配置.png">
+</div>
+
+
+<p>然后在刚才打开的Git Bash中输入命令安装Git插件，<del>（也许不用安装也可以用）</del>：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git -save</span><br><span class="line">git init</span><br></pre></td></tr></table></figure>
+<p>然后绑定个人信息命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">&quot;roninzhezhe&quot;</span></span><br><span class="line">git config --global user.email <span class="string">&quot;3280764487@qq.com&quot;</span></span><br><span class="line"></span><br><span class="line">ssh-keygen -t rsa -C <span class="string">&quot;3280764487@qq.com&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>作用分别是，绑定用户名与用户邮箱，生成ssh key用来与特定的仓库建立上传链接。</p>
+<p>创建好的ssh key一般是在<code>C:\Users\dyz\.ssh\id_rsa.pub</code>文件，用记事本打开之后复制全部内容，然后打开github的设置（是在自己右上角头像的设置，不是单独仓库的设置）：</p>
+<div align=center>
+    <img src="/pic/002-compute_setting/001-blog/021-新建Github仓库ssh_key配置1.png">
+</div>
+
+<p>新建一个SSH key，title是key的名字，不重要，将复制的内容黏贴到Key处，然后点击Add SSH key完成：</p>
+<div align=center>
+    <img src="/pic/002-compute_setting/001-blog/022-新建Github仓库ssh_key配置2.png">
+</div>
+
+
+<h4 id="Git编译上传以及打开自建的博客网站"><a href="#Git编译上传以及打开自建的博客网站" class="headerlink" title="Git编译上传以及打开自建的博客网站"></a>Git编译上传以及打开自建的博客网站</h4><p>反回Git bash，输入命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
+<p><code>hexo d</code>代表deployed，部署的意思，意义就是部署到Github的仓库中，上传之后会有一段时间（大概两分钟），Github处理上传的文件并形成网站，随后可以打开网址：</p>
+<pre><code>https://github用户名.github.io/
+</code></pre>
+<p>看到自己的个人博客啦！</p>
+</font>
 </font>
     </div>
 
@@ -257,7 +404,7 @@
       <i class="fa fa-chevron-left"></i> SIFT算法笔记（1）
     </a></div>
       <div class="post-nav-item">
-    <a href="/2022/09/30/003-slam/%E5%9B%BE%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/" rel="next" title="图神经网络">
+    <a href="/2022/09/30/004-matlab_plot/matlab%E7%BB%98%E5%9B%BE%E8%AE%BE%E7%BD%AE%E6%8A%80%E5%B7%A7/" rel="next" title="图神经网络">
       图神经网络 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
@@ -318,7 +465,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85node-js"><span class="nav-number">1.</span> <span class="nav-text">安装node.js</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85Git-for-Windows"><span class="nav-number">2.</span> <span class="nav-text">下载安装Git for Windows</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HEXO%E5%AE%89%E8%A3%85"><span class="nav-number">3.</span> <span class="nav-text">HEXO安装</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E8%A3%85node-js"><span class="nav-number">1.</span> <span class="nav-text">安装node.js</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85Git-for-Windows"><span class="nav-number">2.</span> <span class="nav-text">下载安装Git for Windows</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#HEXO%E5%AE%89%E8%A3%85"><span class="nav-number">3.</span> <span class="nav-text">HEXO安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Vscode%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85"><span class="nav-number">4.</span> <span class="nav-text">Vscode插件安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9F%BA%E4%BA%8EHexo%E7%9A%84Next%E4%B8%BB%E9%A2%98%E9%A3%8E%E6%A0%BC%E6%A8%A1%E6%9D%BF%E4%B8%8B%E8%BD%BD%E4%BD%BF%E7%94%A8"><span class="nav-number">5.</span> <span class="nav-text">基于Hexo的Next主题风格模板下载使用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Next%E7%9A%84%E6%9C%AC%E5%9C%B0%E7%BC%96%E8%AF%91%E5%92%8C%E9%A2%84%E8%A7%88"><span class="nav-number">6.</span> <span class="nav-text">Next的本地编译和预览</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Git%E7%BC%96%E8%AF%91%E4%B8%8A%E4%BC%A0%E4%BB%A5%E5%8F%8A%E6%89%93%E5%BC%80%E8%87%AA%E5%BB%BA%E7%9A%84%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99"><span class="nav-number">7.</span> <span class="nav-text">Git编译上传以及打开自建的博客网站</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -332,14 +479,14 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-count">7</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
   </nav>
