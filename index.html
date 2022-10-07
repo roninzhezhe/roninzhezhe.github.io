@@ -252,7 +252,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-10-07 22:38:25" itemprop="dateModified" datetime="2022-10-07T22:38:25+08:00">2022-10-07</time>
+                <time title="Modified: 2022-10-07 22:56:28" itemprop="dateModified" datetime="2022-10-07T22:56:28+08:00">2022-10-07</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -275,29 +275,22 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <head>
-<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
-<script type="text/x-mathjax-config">
-        MathJax.Hub.Config({
-            tex2jax: {
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-            inlineMath: [['$','$']]
-            }
-        });
-    </script>
-</head>
-<p><font size=5></p>
+          <p><font size=5></p>
 <p><font face="仿宋_GB2312"></p>
-<h3 id="图神经网络">图神经网络</h3>
+<center>
+<h4 id="图神经网络">图神经网络</h4>
+</center>
 <p><font color=blue><a
 target="_blank" rel="noopener" href="https://arxiv.org/pdf/1710.10903.pdf">图神经网络原文下载地址</a></font></p>
 <pre><code>https://arxiv.org/pdf/1710.10903.pdf</code></pre>
 <p><font color=blue><a
 target="_blank" rel="noopener" href="https://github.com/Diego999/pyGAT">图神经网络源码下载地址</a></font></p>
 <pre><code>https://github.com/Diego999/pyGAT</code></pre>
+<center>
 <h4 id="自注意力机制">自注意力机制</h4>
-<p>一个self-attention模块接收n个输入，然后返回n个输出。
-写一个self-attention模块包括以下步骤</p>
+</center>
+<p>  一个self-attention模块接收n个输入，然后返回n个输出。</p>
+<p>  写一个self-attention模块包括以下步骤</p>
 <pre><code>1. 准备输入
 2. 初始化权重
 3. 推导key, query 和 value
@@ -306,49 +299,39 @@ target="_blank" rel="noopener" href="https://github.com/Diego999/pyGAT">图神�
 6. 将分数与值相乘
 7. 将权重值相加，得到输出1
 8. 对输入2和输入3重复步骤4-7</code></pre>
-<p>假设现在有一个句子<font size=3><span
-class="math inline">\((s_1,s_2,s_3)\)</span></font>,<font size=3><span
-class="math inline">\(v\)</span></font>是<font size=3><span
-class="math inline">\(s\)</span></font>的转置；
-第一个词和每一个词的内积,相似度越大,结果越大 <font size=3><span
-class="math inline">\((s_1v_1, s_1v_2, s_1v_3)\)</span></font></p>
-<p>第二个词和每一个词的内积 <font size=3><span
-class="math inline">\((s_2v_1 ,s_2v_1, s_2v_3)\)</span></font></p>
-<p>第三个词和每一个词的内积 <font size=3><span
-class="math inline">\((s_3v_1, s_3v_2, s_3v_3)\)</span></font></p>
-横向在每一行中做softmax：
-<div data-align="center">
-<p><font size=3></p>
-<p><span class="math inline">\(Softmax(s_1v_1, s_1v_2, s_1v_3)=(a_{11}
-,a_{12},a_{13})\)</span> </font></p>
-</div>
-根据注意力矩阵求和
-<div data-align="center">
-<p><font size=3></p>
-<p><span class="math inline">\(c_1 =
-a_{11}s_1+a_{21}s_2+a_{31}s_3\)</span> <span class="math inline">\(c_2 =
-a_{21}s_1+a_{22}s_2+a_{32}s_3\)</span> <span class="math inline">\(c_3 =
-a_{31}s_1+a_{23}s_2+a_{33}s_3\)</span> </font></p>
-</div>
+<p>  假设现在有一个句子<span class="math inline">\(\tiny
+(s_1,s_2,s_3)\)</span>,<span class="math inline">\(\tiny
+v\)</span>是<span class="math inline">\(\tiny s\)</span>的转置；</p>
+<p>  第一个词和每一个词的内积,相似度越大,结果越大 <span
+class="math inline">\(\tiny (s_1v_1, s_1v_2, s_1v_3)\)</span></p>
+<p>  第二个词和每一个词的内积 <span class="math inline">\(\tiny (s_2v_1
+,s_2v_1, s_2v_3)\)</span></p>
+<p>  第三个词和每一个词的内积 <span class="math inline">\(\tiny (s_3v_1,
+s_3v_2, s_3v_3)\)</span></p>
+<p>  横向在每一行中做softmax：</p>
+<p><span class="math display">\[ \tiny Softmax(s_1v_1, s_1v_2,
+s_1v_3)=(a_{11} ,a_{12},a_{13})\]</span></p>
+<p>  根据注意力矩阵求和</p>
+<p><span class="math display">\[ \tiny c_1 =
+a_{11}s_1+a_{21}s_2+a_{31}s_3\]</span></p>
+<p><span class="math display">\[ \tiny c_2 =
+a_{21}s_1+a_{22}s_2+a_{32}s_3\]</span></p>
+<p><span class="math display">\[ \tiny c_3 =
+a_{31}s_1+a_{23}s_2+a_{33}s_3\]</span></p>
+<center>
 <h4 id="softmax函数"><span
 class="math inline">\(Softmax\)</span>函数</h4>
-<div data-align="center">
-<p><font size=3></p>
-<p><span
-class="math inline">\(Softmax(Z_i)=\frac{e^{z_i}}{\sum_{c=1}^{C}e^{z_c}}={e^{z_i}}/{\sum_{c=1}^{C}e^{z_c}}\)</span>
-</font></p>
-</div>
-<p>  指数函数曲线呈现递增趋势，最重要的是斜率逐渐增大，也就是说在x轴上一个很小的变化，可以导致y轴上很大的变化。这种函数曲线能够将输出的数值拉开距离。
-  指数函数的曲线斜率逐渐增大虽然能够将输出值拉开距离，但是也带来了缺点，当
-值非常大的话，计算得到的数值也会变的非常大，数值可能会溢出。
-  当然针对数值溢出有其对应的优化方法，将每一个输出值减去输出值中最大的值。</p>
-<div data-align="center">
-<p><font size=3></p>
-<p><span class="math inline">\(D=Max(z_i)\)</span> <span
-class="math inline">\(Softmax(Z_i)={e^{z_i-D}}/{\sum_{c=1}^{C}e^{z_c-D}}\)</span>
-</font></p>
-</div>
-<p>TensorFlow提供的统一函数式接口为<del>（暂时不会TensorFlow）</del>：</p>
+</center>
+<p><span class="math display">\[ \tiny
+Softmax(Z_i)=\frac{e^{z_i}}{\sum_{c=1}^{C}e^{z_c}}={e^{z_i}}/{\sum_{c=1}^{C}e^{z_c}}\]</span></p>
+<p>  指数函数曲线呈现递增趋势，最重要的是斜率逐渐增大，也就是说在x轴上一个很小的变化，可以导致y轴上很大的变化。这种函数曲线能够将输出的数值拉开距离。</p>
+<p>  指数函数的曲线斜率逐渐增大虽然能够将输出值拉开距离，但是也带来了缺点，当
+值非常大的话，计算得到的数值也会变的非常大，数值可能会溢出。</p>
+<p>  当然针对数值溢出有其对应的优化方法，将每一个输出值减去输出值中最大的值。</p>
+<p><span class="math display">\[ \tiny D=Max(z_i)\]</span> <span
+class="math display">\[ \tiny
+Softmax(Z_i)={e^{z_i-D}}/{\sum_{c=1}^{C}e^{z_c-D}}\]</span></p>
+<p>  TensorFlow提供的统一函数式接口为<del>（暂时不会TensorFlow）</del>：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> tensorflow <span class="keyword">as</span> tf</span><br><span class="line"><span class="built_in">print</span>(tf.__version__) <span class="comment"># 2.0.0</span></span><br><span class="line">tf.keras.losses.categorical_crossentropy(y_true, y_pred, from_logits = <span class="literal">False</span>)</span><br></pre></td></tr></table></figure>
 <p></font> </font></p>
 
