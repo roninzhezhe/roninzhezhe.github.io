@@ -30,8 +30,9 @@
 <meta property="og:image" content="http://example.com/pic/004-superglue/001-supergule_frame_work.png">
 <meta property="og:image" content="http://example.com/pic/004-superglue/002-supergule_mattic.png">
 <meta property="og:image" content="http://example.com/pic/004-superglue/003-supergule_matix.png">
+<meta property="og:image" content="http://example.com/pic/004-superglue/004-supergule_self_cross_attition.png">
 <meta property="article:published_time" content="2022-09-25T16:00:00.000Z">
-<meta property="article:modified_time" content="2022-10-07T14:34:43.311Z">
+<meta property="article:modified_time" content="2022-10-09T07:57:34.982Z">
 <meta property="article:author" content="杜永喆">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/pic/004-superglue/001-supergule_frame_work.png">
@@ -189,7 +190,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-10-07 22:34:43" itemprop="dateModified" datetime="2022-10-07T22:34:43+08:00">2022-10-07</time>
+                <time title="Modified: 2022-10-09 15:57:34" itemprop="dateModified" datetime="2022-10-09T15:57:34+08:00">2022-10-09</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -227,7 +228,7 @@ Description》，备用链接。后文中反复提到的self-attention/cross-att
 <center>
 <h4 id="摘要">摘要</h4>
 </center>
-<p>  本文提出了一种能够同时进行特征匹配以及滤除外点的网络。其中特征匹配是通过求解可微分最优化转移问题(Optimal
+<p>  本文提出了一种能够同时进行特征匹配以及滤除外点的网络。其中特征匹配是通过求解<font color=red>可微分最优化转移问题</font>(Optimal
 Transport
 Problem)来解决；本文基于注意力机制提出了一种将2D特征点以及聚合机制，这使得SuperGlue能够同时感知潜在的3D场景以及进行特征匹配。该算法与传统的，手工设计的特征相比，能够在室内外环境中位姿估计任务中取得最好的结果，该网络能够在GPU上达到实时，预期能够集成到SFM以及SLAM算法中。</p>
 <center>
@@ -236,9 +237,9 @@ Problem)来解决；本文基于注意力机制提出了一种将2D特征点以�
 <div data-align="center">
 <img src="/pic/004-superglue/001-supergule_frame_work.png">
 </div>
-<p>  <strong>SuperGlue由两个主要组成部分组成：注意图神经网络(optimal
+<p>  <font color=blue>SuperGlue由两个主要组成部分组成：注意图神经网络(optimal
 matching
-layer)（第3.1节）和最优匹配层（第3.2节）。第一个组件使用关键点编码器将关键点位置p和它们的视觉描述符d映射到一个向量中，然后使用交替的自注意层和交叉注意层（重复L次）来创建更强大的表示f。最优匹配层创建一个M比N分数矩阵，用垃圾箱扩充，然后使用Sinkhorn算法找到最优部分赋值（用于T迭代）。</strong></p>
+layer)（第3.1节）和最优匹配层（第3.2节）。第一个组件使用关键点编码器将关键点位置p和它们的视觉描述符d映射到一个向量中，然后使用交替的自注意层和交叉注意层（重复L次）来创建更强大的表示f。最优匹配层创建一个M比N分数矩阵，用垃圾箱扩充，然后使用Sinkhorn算法找到最优部分赋值（用于T迭代）。</font></p>
 <p>  <font color=red>SuperGlue是一种特征匹配网络</font>，它的输入是2张图像中特征点以及描述子（手工特征或者深度学习特征均可），输出是图像特征之间的匹配关系。</p>
 <p>  作者认为学习特征匹配可以被视为找到两簇点的局部分配关系。作者受到了Transformer的启发，同时将self-和cross-attention利用特征点位置以及其视觉外观进行匹配。</p>
 <center>
@@ -302,7 +303,7 @@ class="math inline">\(\tiny ^{(0)} \mathbf{x}_{i}\)</span>，</p>
 <p>  其中MLP表示多层感知机（Multilayer Perceptron
 ，MLP）此处<font color=red>用于对低维特征升维</font>，上式实际上是将视觉外观以及特征点位置进行了耦合，正因如此，这使得该Encode形式使得后续的注意力机制能够充分考虑到特征的外观以及位置相似度。</p>
 <center>
-<h4 id="多层神经网络mgnn">多层神经网络(MGNN)</h4>
+<h4 id="多层图神经网络mgnn">多层图神经网络(MGNN)</h4>
 </center>
 <p>  考虑一个单一的完全图，它的节点是图像中每个特征点，这个图包括两种不同的无向边：</p>
 <p>  1. 一种是“Intra-image edges”（self edge）<span
@@ -336,6 +337,56 @@ B\)</span>上所有特征有类似的更新形式。可以看到self 以及cross
 edges绑在一起并交替进行更新，先self后cross，作者提到共有固定数量的<span
 class="math inline">\(\tiny L\)</span>层。</p>
 <p>  需要说明的是，这里的self-/cross-attention实际上就是模拟了人类来回浏览匹配的过程，其中<font color=red>self-attention是为了使得特征更加具有匹配特异性，而cross-attention是为了用这些具有特异性的点做图像间特征的相似度比较</font>。</p>
+<center>
+<h4 id="注意力聚集attentional-aggregation">注意力聚集(Attentional
+Aggregation)</h4>
+</center>
+<p>  基于元素属性检索到元素的<span class="math inline">\(\tiny
+value\)</span>：<span class="math inline">\(\tiny
+\mathbf{v}_j\)</span>；键值<span class="math inline">\(\tiny
+keys\)</span>：<span class="math inline">\(\tiny
+\mathbf{k}_j\)</span>；查询值<span class="math inline">\(\tiny
+query\)</span>，下标用<span class="math inline">\(\tiny
+i\)</span>表示：<span class="math inline">\(\tiny
+\mathbf{q}_i\)</span>。<span class="math inline">\(\tiny
+message\)</span>被计算为这些值的加权平均值。</p>
+<p><span class="math display">\[\tiny \mathbf{m}_{\mathcal{E}
+\rightarrow i}=\sum_{j:(i, j) \in \mathcal{E}}
+\alpha_{i j} \mathbf{v}_{j}\]</span></p>
+<p>  其中注意力权重<span class="math inline">\(\tiny
+{\alpha}_{ij}\)</span>是查询与检索到对象键值相似度的<span
+class="math inline">\(\tiny Softmax\)</span>，即：<span
+class="math inline">\(\tiny
+\alpha_{ij}={Softmax}_{j}(\mathbf{q}_{i}^{T}\mathbf{k}_{j})\)</span>。</p>
+<p>  令待查询点特征点<span class="math inline">\(\tiny
+i\)</span>位于查询图像<span class="math inline">\(\tiny
+\mathbf{Q}\)</span>上，所有的源特征点位于图像<span
+class="math inline">\(\tiny
+\mathbf{S}\)</span>上，其中，于是我们可以将key，query以及value写成下述形式：</p>
+<p><span class="math display">\[\tiny \begin{aligned} \mathbf{q}_{i}
+&amp;=\mathbf{W}_{1}^{(\ell)}
+\mathbf{x}_{i}^{Q}+\mathbf{b}_{1} \\\left[\begin{array}{l}\mathbf{k}_{j}
+\\ \mathbf{v}_{j}\end{array}\right]
+&amp;=\left[\begin{array}{l}\mathbf{W}_{2} \\
+\mathbf{W}_{3}\end{array}\right](\ell)
+\mathbf{x}_{i}^{S}+\left[\begin{array}{l}\mathbf{b}_{2} \\
+\mathbf{b}_{3}\end{array}\right] \end{aligned}\]</span></p>
+<div data-align="center">
+<img src="/pic/004-superglue/004-supergule_self_cross_attition.png">
+</div>
+<p>  上图展示了每层self-attention以及across-attention中权重<span
+class="math inline">\(\tiny
+{\alpha_{ij}}\)</span>的结果。按照匹配从难到易，文中画出了3个不同的特征点作为演示，绿色特征点（容易），蓝色特征点（中等）以及红色特征点（困难）。</p>
+<p>  对于self-attention，初始时它（某个特征）关联了图像上所有的点（首行），然后逐渐地关注在与该特征相邻近的特征点（尾行）。同样地，cross-attention主要关注去匹配可能的特征点，随着层的增加，它逐渐减少匹配点集直到收敛。绿色特征点在第9层就已经趋近收敛，而红色特征直到最后才能趋紧收敛（匹配）。可以看到无论是self还是cross，它们关注的区域都会随着网络层深度的增加而逐渐缩小。</p>
+<p>  经过了<span class="math inline">\(\tiny
+{L}\)</span>次self/cross-attention后就可以得到注意力GNN的输出，对于图像<span
+class="math inline">\(\tiny \text A\)</span>我们有：</p>
+<p><span class="math display">\[\tiny \mathbf{f}_{i}^{A}=\mathbf{W}
+\cdot^{(L)} \mathbf{x}_{i}^{A}+\mathbf{b},\quad \forall i \in
+\mathcal{A}\]</span></p>
+<p>  我们可以把<span class="math inline">\(\tiny
+\mathbf{f}_{i}^{A}\)</span>理解为匹配描述子（类比特征描述子），专门为特征匹配服务，对于图像<span
+class="math inline">\(\tiny \text B\)</span>具有类似的形式。</p>
 <p></font> </font></p>
 
     </div>
@@ -417,7 +468,8 @@ class="math inline">\(\tiny L\)</span>层。</p>
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%91%98%E8%A6%81"><span class="nav-number">1.</span> <span class="nav-text">摘要</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A1%86%E6%9E%B6"><span class="nav-number">2.</span> <span class="nav-text">框架</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%AC%E5%BC%8F%E5%8C%96%E6%8F%8F%E8%BF%B0"><span class="nav-number">3.</span> <span class="nav-text">公式化描述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%83%A8%E5%88%86%E5%88%86%E9%85%8D%E7%9F%A9%E9%98%B5"><span class="nav-number">4.</span> <span class="nav-text">部分分配矩阵</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%89%B9%E5%BE%81%E7%82%B9encode"><span class="nav-number">5.</span> <span class="nav-text">特征点Encode</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A4%9A%E5%B1%82%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9Cmgnn"><span class="nav-number">6.</span> <span class="nav-text">多层神经网络(MGNN)</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%91%98%E8%A6%81"><span class="nav-number">1.</span> <span class="nav-text">摘要</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A1%86%E6%9E%B6"><span class="nav-number">2.</span> <span class="nav-text">框架</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%AC%E5%BC%8F%E5%8C%96%E6%8F%8F%E8%BF%B0"><span class="nav-number">3.</span> <span class="nav-text">公式化描述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%83%A8%E5%88%86%E5%88%86%E9%85%8D%E7%9F%A9%E9%98%B5"><span class="nav-number">4.</span> <span class="nav-text">部分分配矩阵</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%89%B9%E5%BE%81%E7%82%B9encode"><span class="nav-number">5.</span> <span class="nav-text">特征点Encode</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A4%9A%E5%B1%82%E5%9B%BE%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9Cmgnn"><span class="nav-number">6.</span> <span class="nav-text">多层图神经网络(MGNN)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B3%A8%E6%84%8F%E5%8A%9B%E8%81%9A%E9%9B%86attentional-aggregation"><span class="nav-number">7.</span> <span class="nav-text">注意力聚集(Attentional
+Aggregation)</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 

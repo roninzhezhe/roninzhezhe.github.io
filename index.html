@@ -486,7 +486,7 @@ Softmax(Z_i)={e^{z_i-D}}/{\sum_{c=1}^{C}e^{z_c-D}}\]</span></p>
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-10-02 20:40:40" itemprop="dateModified" datetime="2022-10-02T20:40:40+08:00">2022-10-02</time>
+                <time title="Modified: 2022-10-08 20:55:13" itemprop="dateModified" datetime="2022-10-08T20:55:13+08:00">2022-10-08</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -509,197 +509,195 @@ Softmax(Z_i)={e^{z_i-D}}/{\sum_{c=1}^{C}e^{z_c-D}}\]</span></p>
     <div class="post-body" itemprop="articleBody">
 
       
-          <font size=5>
-<font face="仿宋_GB2312">
-
-<h4 id="安装node-js"><a href="#安装node-js" class="headerlink" title="安装node.js"></a>安装node.js</h4><p>选择长期支持版本的最新版本下载即可，<a target="_blank" rel="noopener" href="https://nodejs.org/en/">下载网址</a>：</p>
-<pre><code>https://nodejs.org/en/
-</code></pre>
-<div align=center>
-    <img src="/pic/002-compute_setting/001-blog/001-node官网下载.png">
+          <p><font size=5> <font face="仿宋_GB2312"></p>
+<h4 id="安装node.js">安装node.js</h4>
+<p>选择长期支持版本的最新版本下载即可，<a
+target="_blank" rel="noopener" href="https://nodejs.org/en/">下载网址</a>：</p>
+<pre><code>https://nodejs.org/en/</code></pre>
+<div data-align="center">
+<pre><code>&lt;img src=&quot;/pic/002-compute_setting/001-blog/001-node官网下载.png&quot;&gt;</code></pre>
 </div>
-
-
-<h4 id="下载安装Git-for-Windows"><a href="#下载安装Git-for-Windows" class="headerlink" title="下载安装Git for Windows"></a>下载安装Git for Windows</h4><p>选择最新的版本下载即可，<a target="_blank" rel="noopener" href="https://github.com/git-for-windows/gitreleases/">Github下载地址</a>：</p>
-<pre><code>https://github.com/git-for-windows/git/releases/
-</code></pre>
-<div align=center>
-    <img src="/pic/002-compute_setting/001-blog/002-Git从github下载.png">
+<h4 id="下载安装git-for-windows">下载安装Git for Windows</h4>
+<p>选择最新的版本下载即可，<a
+target="_blank" rel="noopener" href="https://github.com/git-for-windows/gitreleases/">Github下载地址</a>：</p>
+<pre><code>https://github.com/git-for-windows/git/releases/</code></pre>
+<div data-align="center">
+<pre><code>&lt;img src=&quot;/pic/002-compute_setting/001-blog/002-Git从github下载.png&quot;&gt;</code></pre>
 </div>
-
-<p>或者是从<a target="_blank" rel="noopener" href="https://gitforwindows.org/">Git for Windows 官网下载</a>：</p>
-<pre><code>https://gitforwindows.org/
-</code></pre>
-<div align=center>
-    <img src="/pic/002-compute_setting/001-blog/003-Git从官网下载.png">
+<p>或者是从<a target="_blank" rel="noopener" href="https://gitforwindows.org/">Git for Windows
+官网下载</a>：</p>
+<pre><code>https://gitforwindows.org/</code></pre>
+<div data-align="center">
+<pre><code>&lt;img src=&quot;/pic/002-compute_setting/001-blog/003-Git从官网下载.png&quot;&gt;</code></pre>
 </div>
-
-<h4 id="HEXO安装"><a href="#HEXO安装" class="headerlink" title="HEXO安装"></a>HEXO安装</h4><p>安装好node.js以及Git之后，才能执行Hexo的安装。<br>先运行windows的cmd<br>在命令行（cmd）中执行以下命令：</p>
+<h4 id="hexo安装">HEXO安装</h4>
+<p>安装好node.js以及Git之后，才能执行Hexo的安装。 先运行windows的cmd
+在命令行（cmd）中执行以下命令：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
 <p>执行安装命令可能会遇到下载比较慢的情况，建议开Clash梯子。</p>
-<p>安装无误，在cmd中输入</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo -v</span><br></pre></td></tr></table></figure>
-<p>会输出如下信息：</p>
-<div align=center>
-    <img src="/pic/002-compute_setting/001-blog/008-hexo插件版本显示.png">
+安装无误，在cmd中输入 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo -v</span><br></pre></td></tr></table></figure> 会输出如下信息：
+<div data-align="center">
+<pre><code>&lt;img src=&quot;/pic/002-compute_setting/001-blog/008-hexo插件版本显示.png&quot;&gt;</code></pre>
 </div>
-
-<h4 id="Vscode插件安装"><a href="#Vscode插件安装" class="headerlink" title="Vscode插件安装"></a>Vscode插件安装</h4><p><a target="_blank" rel="noopener" href="https://code.visualstudio.com/">Vscode 官网</a></p>
-<pre><code>https://code.visualstudio.com/
-</code></pre>
-<p>安装3个插件就够了<br>Markdown All In One</p>
-<div align=center>
-    <img src="/pic/002-compute_setting/001-blog/006-vscode安装插件.png">
+<h4 id="vscode插件安装">Vscode插件安装</h4>
+<p><a target="_blank" rel="noopener" href="https://code.visualstudio.com/">Vscode 官网</a></p>
+<pre><code>https://code.visualstudio.com/</code></pre>
+安装3个插件就够了 Markdown All In One
+<div data-align="center">
+<pre><code>&lt;img src=&quot;/pic/002-compute_setting/001-blog/006-vscode安装插件.png&quot;&gt;</code></pre>
 </div>
-
-<p>Markdown Preview enhanced<br>构建实时预览的插件</p>
-<div align=center>
-    <img src="/pic/002-compute_setting/001-blog/006-vscode安装插件1.png">
+Markdown Preview enhanced 构建实时预览的插件
+<div data-align="center">
+<pre><code>&lt;img src=&quot;/pic/002-compute_setting/001-blog/006-vscode安装插件1.png&quot;&gt;</code></pre>
 </div>
-
-
 <p>Markdown Preview Github Styling</p>
-<div align=center>
-    <img src="/pic/002-compute_setting/001-blog/006-vscode安装插件2.png">
+<div data-align="center">
+<pre><code>&lt;img src=&quot;/pic/002-compute_setting/001-blog/006-vscode安装插件2.png&quot;&gt;</code></pre>
 </div>
-
-<p>安装好上边的三个插件之后，需要重启Vscode才能正常使用其中的功能<br>重启之后打开md文件，然后右键选择</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[MEP:打开侧边预览]</span><br></pre></td></tr></table></figure>
-
-<div align=center>
-    <img src="/pic/002-compute_setting/001-blog/007-vscode预览功能.png">
+<p>安装好上边的三个插件之后，需要重启Vscode才能正常使用其中的功能
+重启之后打开md文件，然后右键选择 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[MEP:打开侧边预览]</span><br></pre></td></tr></table></figure></p>
+<div data-align="center">
+<pre><code>&lt;img src=&quot;/pic/002-compute_setting/001-blog/007-vscode预览功能.png&quot;&gt;</code></pre>
 </div>
-
-<h4 id="基于Hexo的Next主题风格模板下载使用"><a href="#基于Hexo的Next主题风格模板下载使用" class="headerlink" title="基于Hexo的Next主题风格模板下载使用"></a>基于Hexo的Next主题风格模板下载使用</h4><p>基于Hexo框架的主题有很多，最受欢迎的是Next模板。<br>安装完成上述的包之后，打开windows的cmd执行：</p>
-<pre><code>npm install -g hexo-cli
-</code></pre>
-<p>然后在某一处新建一个文件夹，然后在cmd中cd进入此文件夹<br>注意在切换的时候，cmd默认进入的是C盘，切换盘符的命令比较特殊：<br>例如我想从C盘切换到我的D盘，执行以下命令：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd /d d:</span><br></pre></td></tr></table></figure>
-<p>得到如下的结果：</p>
-<div align=center>
-    <img src="/pic/002-compute_setting/001-blog/009-cmd切换盘符.png">
+<h4
+id="基于hexo的next主题风格模板下载使用">基于Hexo的Next主题风格模板下载使用</h4>
+<p>基于Hexo框架的主题有很多，最受欢迎的是Next模板。
+安装完成上述的包之后，打开windows的cmd执行：</p>
+<pre><code>npm install -g hexo-cli</code></pre>
+然后在某一处新建一个文件夹，然后在cmd中cd进入此文件夹
+注意在切换的时候，cmd默认进入的是C盘，切换盘符的命令比较特殊：
+例如我想从C盘切换到我的D盘，执行以下命令： <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd /d d:</span><br></pre></td></tr></table></figure>
+得到如下的结果：
+<div data-align="center">
+<pre><code>&lt;img src=&quot;/pic/002-compute_setting/001-blog/009-cmd切换盘符.png&quot;&gt;</code></pre>
 </div>
-
-<p>我的文件夹建在了: <code>D:\user\Desktop\hexo</code>中,那我完整的执行流程就是：</p>
+<p>我的文件夹建在了:
+<code>D:\user\Desktop\hexo</code>中,那我完整的执行流程就是：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /d d:</span><br><span class="line"><span class="built_in">cd</span> user\Desktop\hexo</span><br><span class="line">hexo init</span><br></pre></td></tr></table></figure>
-<p>注意在<code>hexo init</code>执行的时候要保证cmd的当前路径文件夹是空的。<br>至此基础的安装已经完成，如果之前没有错误就可以关掉cmd了。<br>得到的文件夹的结构应该是如下得样子：</p>
-<div align=center>
-    <img src="/pic/002-compute_setting/001-blog/009-hexo文件夹结构.png">
+<p>注意在<code>hexo init</code>执行的时候要保证cmd的当前路径文件夹是空的。
+至此基础的安装已经完成，如果之前没有错误就可以关掉cmd了。
+得到的文件夹的结构应该是如下得样子：</p>
+<div data-align="center">
+<pre><code>&lt;img src=&quot;/pic/002-compute_setting/001-blog/009-hexo文件夹结构.png&quot;&gt;</code></pre>
 </div>
-
-
-<p>然后就是去下载Next模板：<br><a target="_blank" rel="noopener" href="https://github.com/theme-next">Next模板下载地址:</a>：</p>
-<pre><code>https://github.com/theme-next
-</code></pre>
+<p>然后就是去下载Next模板：<br />
+<a target="_blank" rel="noopener" href="https://github.com/theme-next">Next模板下载地址:</a>：</p>
+<pre><code>https://github.com/theme-next</code></pre>
 <p>next项目中有好多分支，下载最多的是第一个，我也用的第一个。点击进去然后点code下载，得到它的压缩文件夹。</p>
-<div align=center>
-    <img src="/pic/002-compute_setting/001-blog/010-next下载界面.png">
+<div data-align="center">
+<pre><code>&lt;img src=&quot;/pic/002-compute_setting/001-blog/010-next下载界面.png&quot;&gt;</code></pre>
 </div>
-
 <p>然后将下载的压缩包中的文件整体解压到<code>hexo\themes</code>文件夹中:</p>
-<div align=center>
-    <img src="/pic/002-compute_setting/001-blog/011-解压next文件夹.png">
+<div data-align="center">
+<pre><code>&lt;img src=&quot;/pic/002-compute_setting/001-blog/011-解压next文件夹.png&quot;&gt;</code></pre>
 </div>
-
 <p>下载的next文件夹可能名字不是这个，这是我改了名字。</p>
 <p>然后将<code>\hexo\_config.yml</code>文件中的主题更改下：</p>
-<div align=center>
-    <img src="/pic/002-compute_setting/001-blog/014-更改theme主题为next.png">
+<div data-align="center">
+<pre><code>&lt;img src=&quot;/pic/002-compute_setting/001-blog/014-更改theme主题为next.png&quot;&gt;</code></pre>
 </div>
-
 <p>这个主题的名字应该是与theme中的文件夹的名字是一样的，没有试名字换了行不行。</p>
-<h4 id="Next的本地编译和预览"><a href="#Next的本地编译和预览" class="headerlink" title="Next的本地编译和预览"></a>Next的本地编译和预览</h4><p>编译需要在Git中完成，右键整体的文件夹，然后：</p>
-<div align=center>
-    <img src="/pic/002-compute_setting/001-blog/012-编译next文件夹.png">
+<h4 id="next的本地编译和预览">Next的本地编译和预览</h4>
+<p>编译需要在Git中完成，右键整体的文件夹，然后：</p>
+<div data-align="center">
+<pre><code>&lt;img src=&quot;/pic/002-compute_setting/001-blog/012-编译next文件夹.png&quot;&gt;</code></pre>
 </div>
-
-<div align=center>
-    <img src="/pic/002-compute_setting/001-blog/013-编译next文件夹git.png">
+<div data-align="center">
+<pre><code>&lt;img src=&quot;/pic/002-compute_setting/001-blog/013-编译next文件夹git.png&quot;&gt;</code></pre>
 </div>
-
 <p>在Git中执行：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-
 <p>其中<code>hexo g</code>是generate编译生成项目的意思，<code>hexo s</code>是serve创建本地服务器的意思</p>
-<div align=center>
-    <img src="/pic/002-compute_setting/001-blog/013-编译next文件夹serve.png">
+<div data-align="center">
+<pre><code>&lt;img src=&quot;/pic/002-compute_setting/001-blog/013-编译next文件夹serve.png&quot;&gt;</code></pre>
 </div>
-
 <p>最后生成了一个本地的服务器，并输出了访问地址：</p>
-<pre><code>http://localhost:4000
-</code></pre>
+<pre><code>http://localhost:4000</code></pre>
 <p>然后在浏览器中打开这个本地网址就可以看到现在的工程编译后什么样子了。</p>
-<h4 id="Vscode中配置与编辑博客"><a href="#Vscode中配置与编辑博客" class="headerlink" title="Vscode中配置与编辑博客"></a>Vscode中配置与编辑博客</h4><p>编译好上传之后，主页上显示的内容是<code>source\_posts</code>文件夹中的所有md文件的编译汇总，而且无论在哪一个子目录下，都会编译上传。所以可以在<code>source</code>文件夹中建立几个子文件夹用来存编写博客用到的图片等资源:</p>
-<div align=center>
-    <img src="/pic/002-compute_setting/001-blog/015-vscode_next编辑的文件夹位置.png">
+<h4 id="vscode中配置与编辑博客">Vscode中配置与编辑博客</h4>
+<p>编译好上传之后，主页上显示的内容是<code>source\_posts</code>文件夹中的所有md文件的编译汇总，而且无论在哪一个子目录下，都会编译上传。所以可以在<code>source</code>文件夹中建立几个子文件夹用来存编写博客用到的图片等资源:</p>
+<div data-align="center">
+<pre><code>&lt;img src=&quot;/pic/002-compute_setting/001-blog/015-vscode_next编辑的文件夹位置.png&quot;&gt;</code></pre>
 </div>
-
 <p>然后在Vscode中直接打开整个<code>source</code>文件夹作为项目：</p>
-<div align=center>
-    <img src="/pic/002-compute_setting/001-blog/016-vscode打开的文件夹项目.png">
+<div data-align="center">
+<pre><code>&lt;img src=&quot;/pic/002-compute_setting/001-blog/016-vscode打开的文件夹项目.png&quot;&gt;</code></pre>
 </div>
-
 <p>然后就可以打开md文件，在vscode中编辑啦！</p>
-<h4 id="Github中的部署"><a href="#Github中的部署" class="headerlink" title="Github中的部署"></a>Github中的部署</h4><p>首先是要在Github上登录自己的账户，GitHub的用户名不能包含汉字等特殊字符，要不然不可以用。</p>
-<p>首先建立一个Github仓库：</p>
-<div align=center>
-    <img src="/pic/002-compute_setting/001-blog/017-新建Github仓库.png">
+<h4 id="github中的部署">Github中的部署</h4>
+<p>首先是要在Github上登录自己的账户，GitHub的用户名不能包含汉字等特殊字符，要不然不可以用。</p>
+<p>首先建立一个Github仓库：<code>github用户名.github.io</code></p>
+<div data-align="center">
+<pre><code>&lt;img src=&quot;/pic/002-compute_setting/001-blog/017-新建Github仓库.png&quot;&gt;</code></pre>
 </div>
-
-<div align=center>
-    <img src="/pic/002-compute_setting/001-blog/018-新建Github仓库配置.png">
+<div data-align="center">
+<pre><code>&lt;img src=&quot;/pic/002-compute_setting/001-blog/018-新建Github仓库配置.png&quot;&gt;</code></pre>
 </div>
-
-
-
 <p>同时在自己项目的<code>\hexo\_config.yml</code></p>
 <p>设置提交地址：</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: https://hexo.io/docs/one-command-deployment</span></span><br><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">&#x27;git&#x27;</span></span><br><span class="line">  <span class="attr">repository:</span> <span class="string">git@github.com:github用户名/github用户名.github.io.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">main或者master</span></span><br></pre></td></tr></table></figure>
-
-<p>注意<code>repository</code>的地址，一定是要设置为这种格式，将；<br>以及<code>branch</code>要和最终在GitHub中设置的分支保持一致。</p>
+<p>注意<code>repository</code>的地址，一定是要设置为这种格式，将；
+以及<code>branch</code>要和最终在GitHub中设置的分支保持一致。</p>
 <p>我设置的是：</p>
-<div align=center>
-    <img src="/pic/002-compute_setting/001-blog/019-新建Github仓库地址配置.png">
+<div data-align="center">
+<pre><code>&lt;img src=&quot;/pic/002-compute_setting/001-blog/019-新建Github仓库地址配置.png&quot;&gt;</code></pre>
 </div>
-
-
 <p>然后在github中进行Github Pages配置：</p>
 <p>首先是进去新建的repository，进行branch和page设置：</p>
-<div align=center>
-    <img src="/pic/002-compute_setting/001-blog/019-新建Github仓库branch配置.png">
+<div data-align="center">
+<pre><code>&lt;img src=&quot;/pic/002-compute_setting/001-blog/019-新建Github仓库branch配置.png&quot;&gt;</code></pre>
 </div>
-
-<div align=center>
-    <img src="/pic/002-compute_setting/001-blog/019-新建Github仓库page配置.png">
+<div data-align="center">
+<pre><code>&lt;img src=&quot;/pic/002-compute_setting/001-blog/019-新建Github仓库page配置.png&quot;&gt;</code></pre>
 </div>
-
-
-<p>然后在刚才打开的Git Bash中输入命令安装Git插件，<del>（也许不用安装也可以用）</del>：</p>
+<p>然后在刚才打开的Git
+Bash中输入命令安装Git插件，<del>（也许不用安装也可以用）</del>：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git -save</span><br><span class="line">git init</span><br></pre></td></tr></table></figure>
 <p>然后绑定个人信息命令：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">&quot;roninzhezhe&quot;</span></span><br><span class="line">git config --global user.email <span class="string">&quot;3280764487@qq.com&quot;</span></span><br><span class="line"></span><br><span class="line">ssh-keygen -t rsa -C <span class="string">&quot;3280764487@qq.com&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>作用分别是，绑定用户名与用户邮箱，生成ssh key用来与特定的仓库建立上传链接。</p>
-<p>创建好的ssh key一般是在<code>C:\Users\dyz\.ssh\id_rsa.pub</code>文件，用记事本打开之后复制全部内容，然后打开github的设置（是在自己右上角头像的设置，不是单独仓库的设置）：</p>
-<div align=center>
-    <img src="/pic/002-compute_setting/001-blog/021-新建Github仓库ssh_key配置1.png">
+<p>作用分别是，绑定用户名与用户邮箱，生成ssh
+key用来与特定的仓库建立上传链接。</p>
+<p>创建好的ssh
+key一般是在<code>C:\Users\dyz\.ssh\id_rsa.pub</code>文件，用记事本打开之后复制全部内容，然后打开github的设置（是在自己右上角头像的设置，不是单独仓库的设置）：</p>
+<div data-align="center">
+<pre><code>&lt;img src=&quot;/pic/002-compute_setting/001-blog/021-新建Github仓库ssh_key配置1.png&quot;&gt;</code></pre>
 </div>
-
-<p>新建一个SSH key，title是key的名字，不重要，将复制的内容黏贴到Key处，然后点击Add SSH key完成：</p>
-<div align=center>
-    <img src="/pic/002-compute_setting/001-blog/022-新建Github仓库ssh_key配置2.png">
+<p>新建一个SSH
+key，title是key的名字，不重要，将复制的内容黏贴到Key处，然后点击Add SSH
+key完成：</p>
+<div data-align="center">
+<pre><code>&lt;img src=&quot;/pic/002-compute_setting/001-blog/022-新建Github仓库ssh_key配置2.png&quot;&gt;</code></pre>
 </div>
-
-
-<h4 id="Git编译上传以及打开自建的博客网站"><a href="#Git编译上传以及打开自建的博客网站" class="headerlink" title="Git编译上传以及打开自建的博客网站"></a>Git编译上传以及打开自建的博客网站</h4><p>反回Git bash，输入命令：</p>
+<h4
+id="git编译上传以及打开自建的博客网站">Git编译上传以及打开自建的博客网站</h4>
+<p>反回Git bash，输入命令：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><figcaption><span>d```代表deploy，部署的意思，意义就是部署到Github的仓库中，上传之后会有一段时间（大概两分钟），Github处理上传的文件并形成网站，随后可以打开网址：</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">    https://github用户名.github.io/</span><br><span class="line"></span><br><span class="line">看到自己的个人博客啦！</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#### 博客编译上传后的公式处理</span><br><span class="line"></span><br><span class="line">##### 公式大小过大</span><br><span class="line"></span><br><span class="line">一般我用的博客中的正文的字号用以下命令表示：</span><br><span class="line"></span><br><span class="line">```bash</span><br><span class="line">&lt;font size=5&gt;</span><br><span class="line">    ...</span><br><span class="line">    ...</span><br><span class="line"></span><br><span class="line">&lt;/font&gt;</span><br></pre></td></tr></table></figure>
+<p>只是使用<code>$...$</code>来表示公式，最后在网页上的字体大小就显得过于大了，所以我的解决办法是在每个公式前加入字体调整：
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$\tiny ...$</span><br></pre></td></tr></table></figure></p>
+<h5 id="公式标志识别错误">公式标志"$"识别错误</h5>
+<p>使用之后发现有时候公式的范围识别不准确，例如一个段落中有多个行内公式：
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">有时候公式$\tiny math<span class="emphasis">_1$的范围识别不准确，例如一个段落中有多个行内公式$\tiny math_</span>2$，</span><br></pre></td></tr></table></figure> 编译的结果应该是：</p>
+<table>
+<td bgcolor="#FFFFFF">
+<p>有时候公式<span class="math inline">\(\tiny
+math_1\)</span>的范围识别不准确hhh，例如一个段落中有多个行内公式<span
+class="math inline">\(\tiny math_2\)</span>，</p>
+</td>
+</table>
+但是有时候会编译成：
+<table>
+<td bgcolor="#FFFFFF">
+<p>有时候公式math_1<span class="math inline">\(\tiny
+的范围识别不准确hhh，例如一个段落中有多个行内公式\)</span>math_2，</p>
+</td>
+</table>
+<p>虽然在Vscode中预览的显示是非常好的，但是在编译之后会出现各种奇怪的问题，后来查资料是可以安装一个<code>Pandoc</code>的软件，就不容易出现问题。</p>
+<p><a target="_blank" rel="noopener" href="https://pandoc.org/installing.html">Pandoc下载地址：</a></p>
+<pre><code>https://pandoc.org/installing.html</code></pre>
+<p><font color=red>安装之后一定要重启电脑！要不然不能使用，编译出错。</font></p>
+<p></font> </font></p>
 
-<p><code>hexo d</code>代表deploy，部署的意思，意义就是部署到Github的仓库中，上传之后会有一段时间（大概两分钟），Github处理上传的文件并形成网站，随后可以打开网址：</p>
-<pre><code>https://github用户名.github.io/
-</code></pre>
-<p>看到自己的个人博客啦！</p>
-</font>
-</font>
       
     </div>
 
@@ -749,7 +747,7 @@ Softmax(Z_i)={e^{z_i-D}}/{\sum_{c=1}^{C}e^{z_c-D}}\]</span></p>
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-09-29 23:07:47" itemprop="dateModified" datetime="2022-09-29T23:07:47+08:00">2022-09-29</time>
+                <time title="Modified: 2022-10-08 20:55:39" itemprop="dateModified" datetime="2022-10-08T20:55:39+08:00">2022-10-08</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -772,54 +770,39 @@ Softmax(Z_i)={e^{z_i-D}}/{\sum_{c=1}^{C}e^{z_c-D}}\]</span></p>
     <div class="post-body" itemprop="articleBody">
 
       
-          <font size=5>
-
-<font face="仿宋_GB2312">
-
-
+          <p><font size=5></p>
+<p><font face="仿宋_GB2312"></p>
+<h4 id="简介">简介</h4>
 <p>SIFT算法的特点有：</p>
-<ol>
-<li><p>SIFT特征是图像的局部特征，其对旋转、尺度缩放、亮度变化保持不变性，对视角变化、仿射变换、噪声也保持一定程度的稳定性；</p>
-</li>
-<li><p>独特性（Distinctiveness）好，信息量丰富，适用于在海量特征数据库中进行快速、准确的匹配；</p>
-</li>
-<li><p>多量性，即使少数的几个物体也可以产生大量的SIFT特征向量；</p>
-</li>
-<li><p>高速性，经优化的SIFT匹配算法甚至可以达到实时的要求；</p>
-</li>
-<li><p>可扩展性，可以很方便的与其他形式的特征向量进行联合。</p>
-</li>
+<ol type="1">
+<li><p>SIFT特征是图像的局部特征，其对旋转、尺度缩放、亮度变化保持不变性，对视角变化、仿射变换、噪声也保持一定程度的稳定性；</p></li>
+<li><p>独特性（Distinctiveness）好，信息量丰富，适用于在海量特征数据库中进行快速、准确的匹配；</p></li>
+<li><p>多量性，即使少数的几个物体也可以产生大量的SIFT特征向量；</p></li>
+<li><p>高速性，经优化的SIFT匹配算法甚至可以达到实时的要求；</p></li>
+<li><p>可扩展性，可以很方便的与其他形式的特征向量进行联合。</p></li>
 </ol>
 <p>SIFT算法可以解决的问题：</p>
 <p>目标的自身状态、场景所处的环境和成像器材的成像特性等因素影响图像配准/目标识别跟踪的性能。而SIFT算法在一定程度上可解决：</p>
-<ol>
-<li><p>目标的旋转、缩放、平移（RST）</p>
-</li>
-<li><p>图像仿射/投影变换（视点viewpoint）</p>
-</li>
-<li><p>光照影响（illumination）</p>
-</li>
-<li><p>目标遮挡（occlusion）</p>
-</li>
-<li><p>杂物场景（clutter）</p>
-</li>
-<li><p>噪声 </p>
-</li>
+<ol type="1">
+<li><p>目标的旋转、缩放、平移（RST）</p></li>
+<li><p>图像仿射/投影变换（视点viewpoint）</p></li>
+<li><p>光照影响（illumination）</p></li>
+<li><p>目标遮挡（occlusion）</p></li>
+<li><p>杂物场景（clutter）</p></li>
+<li><p>噪声</p></li>
 </ol>
 <p>SIFT算法的实质是在不同的尺度空间上查找关键点(特征点)，并计算出关键点的方向。SIFT所查找到的关键点是一些十分突出，不会因光照，仿射变换和噪音等因素而变化的点，如角点、边缘点、暗区的亮点及亮区的暗点等。</p>
 <p>Lowe将SIFT算法分解为如下四步：</p>
-<ol>
-<li><p>尺度空间极值检测：搜索所有尺度上的图像位置。通过高斯微分函数来识别潜在的对于尺度和旋转不变的兴趣点。</p>
-</li>
-<li><p>关键点定位：在每个候选的位置上，通过一个拟合精细的模型来确定位置和尺度。关键点的选择依据于它们的稳定程度。</p>
-</li>
-<li><p>方向确定：基于图像局部的梯度方向，分配给每个关键点位置一个或多个方向。所有后面的对图像数据的操作都相对于关键点的方向、尺度和位置进行变换，从而提供对于这些变换的不变性。</p>
-</li>
-<li><p>关键点描述：在每个关键点周围的邻域内，在选定的尺度上测量图像局部的梯度。这些梯度被变换成一种表示，这种表示允许比较大的局部形状的变形和光照变化。</p>
-</li>
+<ol type="1">
+<li><p>尺度空间极值检测：搜索所有尺度上的图像位置。通过高斯微分函数来识别潜在的对于尺度和旋转不变的兴趣点。</p></li>
+<li><p>关键点定位：在每个候选的位置上，通过一个拟合精细的模型来确定位置和尺度。关键点的选择依据于它们的稳定程度。</p></li>
+<li><p>方向确定：基于图像局部的梯度方向，分配给每个关键点位置一个或多个方向。所有后面的对图像数据的操作都相对于关键点的方向、尺度和位置进行变换，从而提供对于这些变换的不变性。</p></li>
+<li><p>关键点描述：在每个关键点周围的邻域内，在选定的尺度上测量图像局部的梯度。这些梯度被变换成一种表示，这种表示允许比较大的局部形状的变形和光照变化。</p></li>
 </ol>
-<p>本文沿着Lowe的步骤，参考Rob Hess及Andrea Vedaldi源码，详解SIFT算法的实现过程。</p>
-<p>2.SIFT核心算法——computeKeypointsAndDescriptors<br>computeKeypointsAndDescriptors就是SIFT的核心部分，可以细分为以下几步：</p>
+<p>本文沿着Lowe的步骤，参考Rob Hess及Andrea
+Vedaldi源码，详解SIFT算法的实现过程。</p>
+<p>2.SIFT核心算法——computeKeypointsAndDescriptors
+computeKeypointsAndDescriptors就是SIFT的核心部分，可以细分为以下几步：</p>
 <p>2.1 generateBaseImage：生成基础图像（放大2倍，模糊化）</p>
 <p>2.2 computeNumberOfOctaves：计算高斯金字塔里有多少组图像</p>
 <p>2.3 generateGaussianKernels：生成构建高斯金字塔的滤波器</p>
@@ -827,20 +810,17 @@ Softmax(Z_i)={e^{z_i-D}}/{\sum_{c=1}^{C}e^{z_c-D}}\]</span></p>
 <p>2.5 generateDoGImages：生成高斯差分金字塔</p>
 <p>2.6 findScaleSpaceExtrema：寻找尺度空间的极值点</p>
 <p>2.7 removeDuplicateKeypoints：移除冗余的关键点</p>
-<p>2.8 convertKeypointsToInputImageSize：将关键点位置转换到原图的位置</p>
+<p>2.8
+convertKeypointsToInputImageSize：将关键点位置转换到原图的位置</p>
 <p>2.9 generateDescriptors：关键点生成描述符，供后续相似度的计算</p>
 <p>高斯金字塔是指通过高斯模糊滤波和下采样不断地将图像的尺寸缩小，进而在金字塔中包含多个分辨率的一组图像。</p>
-<p>一般情况下，高斯金字塔的最底层为原图像，每向上一层就会通过高斯模糊滤波+下采样缩小一次图像的尺寸。<br>通常情况下，图像的长与宽会缩小为原来的一半，由于每次图像的长与宽都缩小为原来的一半，图像的缩小速度非常快，因此常见的高斯金字塔的层数为3~6。</p>
-<p>在OpenCV中提供了函数pyrDown()，用于生成图像的上一层高斯金字塔。<br>函数pyrDown()的原型如下：</p>
+<p>一般情况下，高斯金字塔的最底层为原图像，每向上一层就会通过高斯模糊滤波+下采样缩小一次图像的尺寸。
+通常情况下，图像的长与宽会缩小为原来的一半，由于每次图像的长与宽都缩小为原来的一半，图像的缩小速度非常快，因此常见的高斯金字塔的层数为3~6。</p>
+<p>在OpenCV中提供了函数pyrDown()，用于生成图像的上一层高斯金字塔。
+函数pyrDown()的原型如下：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">src—输入图像</span><br><span class="line">dst—输出图像，它的宽度和高度大致为src的1/2 ，具体精确的大小由第三个参数dstsize决定。</span><br><span class="line">dstsize—目标图像的大小，默认值为Size((src.cols+1)/2, (src.rows+1)/2)，自己指定时需要满足以下条件。</span><br><span class="line"></span><br><span class="line">void cv::pyrDown(	InputArray 	src,</span><br><span class="line">					OutputArray 	dst,</span><br><span class="line">					const Size &amp; 	dstsize = Size(),</span><br><span class="line">					int 	borderType = BORDER_DEFAULT </span><br><span class="line">				)	</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p></font> </font></p>
 
-
-
-
-
-
-</font>
-</font>
       
     </div>
 
@@ -890,7 +870,7 @@ Softmax(Z_i)={e^{z_i-D}}/{\sum_{c=1}^{C}e^{z_c-D}}\]</span></p>
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-10-07 22:34:43" itemprop="dateModified" datetime="2022-10-07T22:34:43+08:00">2022-10-07</time>
+                <time title="Modified: 2022-10-09 15:57:34" itemprop="dateModified" datetime="2022-10-09T15:57:34+08:00">2022-10-09</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -928,7 +908,7 @@ Description》，备用链接。后文中反复提到的self-attention/cross-att
 <center>
 <h4 id="摘要">摘要</h4>
 </center>
-<p>  本文提出了一种能够同时进行特征匹配以及滤除外点的网络。其中特征匹配是通过求解可微分最优化转移问题(Optimal
+<p>  本文提出了一种能够同时进行特征匹配以及滤除外点的网络。其中特征匹配是通过求解<font color=red>可微分最优化转移问题</font>(Optimal
 Transport
 Problem)来解决；本文基于注意力机制提出了一种将2D特征点以及聚合机制，这使得SuperGlue能够同时感知潜在的3D场景以及进行特征匹配。该算法与传统的，手工设计的特征相比，能够在室内外环境中位姿估计任务中取得最好的结果，该网络能够在GPU上达到实时，预期能够集成到SFM以及SLAM算法中。</p>
 <center>
@@ -937,9 +917,9 @@ Problem)来解决；本文基于注意力机制提出了一种将2D特征点以�
 <div data-align="center">
 <img src="/pic/004-superglue/001-supergule_frame_work.png">
 </div>
-<p>  <strong>SuperGlue由两个主要组成部分组成：注意图神经网络(optimal
+<p>  <font color=blue>SuperGlue由两个主要组成部分组成：注意图神经网络(optimal
 matching
-layer)（第3.1节）和最优匹配层（第3.2节）。第一个组件使用关键点编码器将关键点位置p和它们的视觉描述符d映射到一个向量中，然后使用交替的自注意层和交叉注意层（重复L次）来创建更强大的表示f。最优匹配层创建一个M比N分数矩阵，用垃圾箱扩充，然后使用Sinkhorn算法找到最优部分赋值（用于T迭代）。</strong></p>
+layer)（第3.1节）和最优匹配层（第3.2节）。第一个组件使用关键点编码器将关键点位置p和它们的视觉描述符d映射到一个向量中，然后使用交替的自注意层和交叉注意层（重复L次）来创建更强大的表示f。最优匹配层创建一个M比N分数矩阵，用垃圾箱扩充，然后使用Sinkhorn算法找到最优部分赋值（用于T迭代）。</font></p>
 <p>  <font color=red>SuperGlue是一种特征匹配网络</font>，它的输入是2张图像中特征点以及描述子（手工特征或者深度学习特征均可），输出是图像特征之间的匹配关系。</p>
 <p>  作者认为学习特征匹配可以被视为找到两簇点的局部分配关系。作者受到了Transformer的启发，同时将self-和cross-attention利用特征点位置以及其视觉外观进行匹配。</p>
 <center>
@@ -1003,7 +983,7 @@ class="math inline">\(\tiny ^{(0)} \mathbf{x}_{i}\)</span>，</p>
 <p>  其中MLP表示多层感知机（Multilayer Perceptron
 ，MLP）此处<font color=red>用于对低维特征升维</font>，上式实际上是将视觉外观以及特征点位置进行了耦合，正因如此，这使得该Encode形式使得后续的注意力机制能够充分考虑到特征的外观以及位置相似度。</p>
 <center>
-<h4 id="多层神经网络mgnn">多层神经网络(MGNN)</h4>
+<h4 id="多层图神经网络mgnn">多层图神经网络(MGNN)</h4>
 </center>
 <p>  考虑一个单一的完全图，它的节点是图像中每个特征点，这个图包括两种不同的无向边：</p>
 <p>  1. 一种是“Intra-image edges”（self edge）<span
@@ -1037,6 +1017,56 @@ B\)</span>上所有特征有类似的更新形式。可以看到self 以及cross
 edges绑在一起并交替进行更新，先self后cross，作者提到共有固定数量的<span
 class="math inline">\(\tiny L\)</span>层。</p>
 <p>  需要说明的是，这里的self-/cross-attention实际上就是模拟了人类来回浏览匹配的过程，其中<font color=red>self-attention是为了使得特征更加具有匹配特异性，而cross-attention是为了用这些具有特异性的点做图像间特征的相似度比较</font>。</p>
+<center>
+<h4 id="注意力聚集attentional-aggregation">注意力聚集(Attentional
+Aggregation)</h4>
+</center>
+<p>  基于元素属性检索到元素的<span class="math inline">\(\tiny
+value\)</span>：<span class="math inline">\(\tiny
+\mathbf{v}_j\)</span>；键值<span class="math inline">\(\tiny
+keys\)</span>：<span class="math inline">\(\tiny
+\mathbf{k}_j\)</span>；查询值<span class="math inline">\(\tiny
+query\)</span>，下标用<span class="math inline">\(\tiny
+i\)</span>表示：<span class="math inline">\(\tiny
+\mathbf{q}_i\)</span>。<span class="math inline">\(\tiny
+message\)</span>被计算为这些值的加权平均值。</p>
+<p><span class="math display">\[\tiny \mathbf{m}_{\mathcal{E}
+\rightarrow i}=\sum_{j:(i, j) \in \mathcal{E}}
+\alpha_{i j} \mathbf{v}_{j}\]</span></p>
+<p>  其中注意力权重<span class="math inline">\(\tiny
+{\alpha}_{ij}\)</span>是查询与检索到对象键值相似度的<span
+class="math inline">\(\tiny Softmax\)</span>，即：<span
+class="math inline">\(\tiny
+\alpha_{ij}={Softmax}_{j}(\mathbf{q}_{i}^{T}\mathbf{k}_{j})\)</span>。</p>
+<p>  令待查询点特征点<span class="math inline">\(\tiny
+i\)</span>位于查询图像<span class="math inline">\(\tiny
+\mathbf{Q}\)</span>上，所有的源特征点位于图像<span
+class="math inline">\(\tiny
+\mathbf{S}\)</span>上，其中，于是我们可以将key，query以及value写成下述形式：</p>
+<p><span class="math display">\[\tiny \begin{aligned} \mathbf{q}_{i}
+&amp;=\mathbf{W}_{1}^{(\ell)}
+\mathbf{x}_{i}^{Q}+\mathbf{b}_{1} \\\left[\begin{array}{l}\mathbf{k}_{j}
+\\ \mathbf{v}_{j}\end{array}\right]
+&amp;=\left[\begin{array}{l}\mathbf{W}_{2} \\
+\mathbf{W}_{3}\end{array}\right](\ell)
+\mathbf{x}_{i}^{S}+\left[\begin{array}{l}\mathbf{b}_{2} \\
+\mathbf{b}_{3}\end{array}\right] \end{aligned}\]</span></p>
+<div data-align="center">
+<img src="/pic/004-superglue/004-supergule_self_cross_attition.png">
+</div>
+<p>  上图展示了每层self-attention以及across-attention中权重<span
+class="math inline">\(\tiny
+{\alpha_{ij}}\)</span>的结果。按照匹配从难到易，文中画出了3个不同的特征点作为演示，绿色特征点（容易），蓝色特征点（中等）以及红色特征点（困难）。</p>
+<p>  对于self-attention，初始时它（某个特征）关联了图像上所有的点（首行），然后逐渐地关注在与该特征相邻近的特征点（尾行）。同样地，cross-attention主要关注去匹配可能的特征点，随着层的增加，它逐渐减少匹配点集直到收敛。绿色特征点在第9层就已经趋近收敛，而红色特征直到最后才能趋紧收敛（匹配）。可以看到无论是self还是cross，它们关注的区域都会随着网络层深度的增加而逐渐缩小。</p>
+<p>  经过了<span class="math inline">\(\tiny
+{L}\)</span>次self/cross-attention后就可以得到注意力GNN的输出，对于图像<span
+class="math inline">\(\tiny \text A\)</span>我们有：</p>
+<p><span class="math display">\[\tiny \mathbf{f}_{i}^{A}=\mathbf{W}
+\cdot^{(L)} \mathbf{x}_{i}^{A}+\mathbf{b},\quad \forall i \in
+\mathcal{A}\]</span></p>
+<p>  我们可以把<span class="math inline">\(\tiny
+\mathbf{f}_{i}^{A}\)</span>理解为匹配描述子（类比特征描述子），专门为特征匹配服务，对于图像<span
+class="math inline">\(\tiny \text B\)</span>具有类似的形式。</p>
 <p></font> </font></p>
 
       
