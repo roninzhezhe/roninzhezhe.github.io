@@ -20,15 +20,15 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="简介 SIFT算法的特点有：  SIFT特征是图像的局部特征，其对旋转、尺度缩放、亮度变化保持不变性，对视角变化、仿射变换、噪声也保持一定程度的稳定性； 独特性（Distinctiveness）好，信息量丰富，适用于在海量特征数据库中进行快速、准确的匹配； 多量性，即使少数的几个物体也可以产生大量的SIFT特征向量； 高速性，经优化的SIFT匹配算法甚至可以达到实时的要求；">
+  <meta name="description" content="简介  尺度不变特征转换(SIFT, Scale Invariant Feature Transform)是图像处理领域中的一种局部特征描述算法. 该方法于1999年由加拿大教授David G.Lowe提出，申请了专利，其专利属于英属哥伦比亚大学. SIFT专利在2020年3月17日之后到期，现在只需更新cv版本即可免费使用. SIFT算法不仅只有尺度不变性，当旋转图像，">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SIFT算法笔记（1）">
 <meta property="og:url" content="http://example.com/2022/09/26/003-slam/SIFT/index.html">
 <meta property="og:site_name" content="Hexo Blog">
-<meta property="og:description" content="简介 SIFT算法的特点有：  SIFT特征是图像的局部特征，其对旋转、尺度缩放、亮度变化保持不变性，对视角变化、仿射变换、噪声也保持一定程度的稳定性； 独特性（Distinctiveness）好，信息量丰富，适用于在海量特征数据库中进行快速、准确的匹配； 多量性，即使少数的几个物体也可以产生大量的SIFT特征向量； 高速性，经优化的SIFT匹配算法甚至可以达到实时的要求；">
+<meta property="og:description" content="简介  尺度不变特征转换(SIFT, Scale Invariant Feature Transform)是图像处理领域中的一种局部特征描述算法. 该方法于1999年由加拿大教授David G.Lowe提出，申请了专利，其专利属于英属哥伦比亚大学. SIFT专利在2020年3月17日之后到期，现在只需更新cv版本即可免费使用. SIFT算法不仅只有尺度不变性，当旋转图像，">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-09-25T16:00:00.000Z">
-<meta property="article:modified_time" content="2022-10-08T12:55:39.162Z">
+<meta property="article:modified_time" content="2022-10-10T08:39:09.557Z">
 <meta property="article:author" content="杜永喆">
 <meta name="twitter:card" content="summary">
 
@@ -185,7 +185,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-10-08 20:55:39" itemprop="dateModified" datetime="2022-10-08T20:55:39+08:00">2022-10-08</time>
+                <time title="Modified: 2022-10-10 16:39:09" itemprop="dateModified" datetime="2022-10-10T16:39:09+08:00">2022-10-10</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -210,7 +210,18 @@
       
         <p><font size=5></p>
 <p><font face="仿宋_GB2312"></p>
+<center>
 <h4 id="简介">简介</h4>
+</center>
+<p>尺度不变特征转换(SIFT, Scale Invariant Feature
+Transform)是图像处理领域中的一种局部特征描述算法.
+该方法于1999年由加拿大教授David
+G.Lowe提出，申请了专利，其专利属于英属哥伦比亚大学.
+SIFT专利在2020年3月17日之后到期，现在只需更新cv版本即可免费使用.</p>
+<p>SIFT算法不仅只有<strong>尺度不变性</strong>，当旋转图像，改变图像亮度，移动拍摄位置时，仍可得到较好的检测效果.</p>
+<center>
+<h4 id="性质">性质</h4>
+</center>
 <p>SIFT算法的特点有：</p>
 <ol type="1">
 <li><p>SIFT特征是图像的局部特征，其对旋转、尺度缩放、亮度变化保持不变性，对视角变化、仿射变换、噪声也保持一定程度的稳定性；</p></li>
@@ -230,6 +241,9 @@
 <li><p>噪声</p></li>
 </ol>
 <p>SIFT算法的实质是在不同的尺度空间上查找关键点(特征点)，并计算出关键点的方向。SIFT所查找到的关键点是一些十分突出，不会因光照，仿射变换和噪音等因素而变化的点，如角点、边缘点、暗区的亮点及亮区的暗点等。</p>
+<center>
+<h4 id="步骤框架">步骤框架</h4>
+</center>
 <p>Lowe将SIFT算法分解为如下四步：</p>
 <ol type="1">
 <li><p>尺度空间极值检测：搜索所有尺度上的图像位置。通过高斯微分函数来识别潜在的对于尺度和旋转不变的兴趣点。</p></li>
@@ -239,21 +253,26 @@
 </ol>
 <p>本文沿着Lowe的步骤，参考Rob Hess及Andrea
 Vedaldi源码，详解SIFT算法的实现过程。</p>
-<p>2.SIFT核心算法——computeKeypointsAndDescriptors
+<p>SIFT核心算法——computeKeypointsAndDescriptors
 computeKeypointsAndDescriptors就是SIFT的核心部分，可以细分为以下几步：</p>
-<p>2.1 generateBaseImage：生成基础图像（放大2倍，模糊化）</p>
-<p>2.2 computeNumberOfOctaves：计算高斯金字塔里有多少组图像</p>
-<p>2.3 generateGaussianKernels：生成构建高斯金字塔的滤波器</p>
-<p>2.4 generateGaussianImages：生成高斯金字塔</p>
-<p>2.5 generateDoGImages：生成高斯差分金字塔</p>
-<p>2.6 findScaleSpaceExtrema：寻找尺度空间的极值点</p>
-<p>2.7 removeDuplicateKeypoints：移除冗余的关键点</p>
-<p>2.8
-convertKeypointsToInputImageSize：将关键点位置转换到原图的位置</p>
-<p>2.9 generateDescriptors：关键点生成描述符，供后续相似度的计算</p>
+<ol type="1">
+<li><p>generateBaseImage：生成基础图像（放大2倍，模糊化）</p></li>
+<li><p>computeNumberOfOctaves：计算高斯金字塔里有多少组图像</p></li>
+<li><p>generateGaussianKernels：生成构建高斯金字塔的滤波器</p></li>
+<li><p>generateGaussianImages：生成高斯金字塔</p></li>
+<li><p>generateDoGImages：生成高斯差分金字塔</p></li>
+<li><p>findScaleSpaceExtrema：寻找尺度空间的极值点</p></li>
+<li><p>removeDuplicateKeypoints：移除冗余的关键点</p></li>
+<li><p>convertKeypointsToInputImageSize：将关键点位置转换到原图的位置</p></li>
+<li><p>generateDescriptors：关键点生成描述符，供后续相似度的计算</p></li>
+</ol>
+<center>
+<h4 id="过程">过程</h4>
+</center>
+<h5 id="高斯金字塔">高斯金字塔</h5>
 <p>高斯金字塔是指通过高斯模糊滤波和下采样不断地将图像的尺寸缩小，进而在金字塔中包含多个分辨率的一组图像。</p>
 <p>一般情况下，高斯金字塔的最底层为原图像，每向上一层就会通过高斯模糊滤波+下采样缩小一次图像的尺寸。
-通常情况下，图像的长与宽会缩小为原来的一半，由于每次图像的长与宽都缩小为原来的一半，图像的缩小速度非常快，因此常见的高斯金字塔的层数为3~6。</p>
+通常情况下，图像的长与宽会缩小为原来的一半，由于每次图像的长与宽都缩小为原来的一半，图像的缩小速度非常快，因此常见的高斯金字塔的层数为3-6。</p>
 <p>在OpenCV中提供了函数pyrDown()，用于生成图像的上一层高斯金字塔。
 函数pyrDown()的原型如下：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">src—输入图像</span><br><span class="line">dst—输出图像，它的宽度和高度大致为src的1/2 ，具体精确的大小由第三个参数dstsize决定。</span><br><span class="line">dstsize—目标图像的大小，默认值为Size((src.cols+1)/2, (src.rows+1)/2)，自己指定时需要满足以下条件。</span><br><span class="line"></span><br><span class="line">void cv::pyrDown(	InputArray 	src,</span><br><span class="line">					OutputArray 	dst,</span><br><span class="line">					const Size &amp; 	dstsize = Size(),</span><br><span class="line">					int 	borderType = BORDER_DEFAULT </span><br><span class="line">				)	</span><br><span class="line"></span><br></pre></td></tr></table></figure>
@@ -338,7 +357,7 @@ convertKeypointsToInputImageSize：将关键点位置转换到原图的位置</p
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AE%80%E4%BB%8B"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AE%80%E4%BB%8B"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%80%A7%E8%B4%A8"><span class="nav-number">2.</span> <span class="nav-text">性质</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%AD%A5%E9%AA%A4%E6%A1%86%E6%9E%B6"><span class="nav-number">3.</span> <span class="nav-text">步骤框架</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BF%87%E7%A8%8B"><span class="nav-number">4.</span> <span class="nav-text">过程</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%AB%98%E6%96%AF%E9%87%91%E5%AD%97%E5%A1%94"><span class="nav-number">4.1.</span> <span class="nav-text">高斯金字塔</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 

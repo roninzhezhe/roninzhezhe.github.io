@@ -232,10 +232,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2022-10-06 00:00:00 / Modified: 11:25:58" itemprop="dateCreated datePublished" datetime="2022-10-06T00:00:00+08:00">2022-10-06</time>
+              <time title="Created: 2022-10-06 00:00:00" itemprop="dateCreated datePublished" datetime="2022-10-06T00:00:00+08:00">2022-10-06</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-10-10 17:26:24" itemprop="dateModified" datetime="2022-10-10T17:26:24+08:00">2022-10-10</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -258,8 +264,30 @@
 
       
           <p><font size=5><font face="仿宋_GB2312"></p>
-<h4 id="SLAM-前端与后端"><a href="#SLAM-前端与后端" class="headerlink" title="$SLAM$前端与后端"></a><center>$SLAM$前端与后端</h4><p>&emsp;&emsp;前端：原始数据处理，特征选择、提取、匹配，短时间内位姿优化和局部建图，里程计。</p>
-<p>&emsp;&emsp;后端：位姿图优化，回环检测。</p>
+<center>
+<h4 id="small-slam前端与后端"><span class="math inline">\(\small
+SLAM\)</span>前端与后端</h4>
+</center>
+<p>  前端：原始数据处理，特征选择、提取、匹配，短时间内位姿优化和局部建图，里程计。</p>
+<p>  后端：位姿图优化，回环检测。</p>
+<center>
+<h4 id="small-manhattan-frame-mf曼哈顿世界"><span
+class="math inline">\(\small Manhattan frame
+(MF)\)</span>（曼哈顿世界）</h4>
+</center>
+<p>  在人造建筑中，一个房间主要可以简化为一个立方体的结构，三个维度彼此垂直，曼哈顿世界就是描述这种建筑结构的一个框架。曼哈顿框架包含一个旋转矩阵<span
+class="math inline">\(\tiny R=[r_1,r_2,r_3]\in SO(3)\)</span>，写作<span
+class="math inline">\(\tiny
+R_{MF}\)</span>。论文<code>《Manhattan World: Compass Direction from a Single Image byBayesian Inference》</code>应该是这个说法的起源，感觉没啥意义...</p>
+<center>
+<h4 id="small-atlanta-world-aw亚特兰大世界"><span
+class="math inline">\(\small Atlanta World
+(AW)\)</span>（亚特兰大世界）</h4>
+</center>
+<p>  亚特兰大世界也是在描述人造建筑，相对于曼哈顿世界，只不过是将描述条件方宽了一点点。曼哈顿世界的描述对于五角大楼这种正五边形的结构就不适用，而亚特兰大世界只是补足了这一种条件。</p>
+<p>  其描述为：一个方向矢量的向量，表示为<span
+class="math inline">\(\tiny \mathcal{V}
+={v_v,{v}_{h_1},{v}_{h_2},...{v}_{h_M},r_3}={v_m}_{m=1}^{M+1}\)</span>。亚特兰大框架中只是水平方向与垂直方向正交即可，水平方向内，建筑的垂直面不必要正交。</p>
 <p></font></font></p>
 
       
@@ -806,7 +834,7 @@ class="math inline">\(\tiny math_2\)</span>，</p>
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-10-08 20:55:39" itemprop="dateModified" datetime="2022-10-08T20:55:39+08:00">2022-10-08</time>
+                <time title="Modified: 2022-10-10 16:39:09" itemprop="dateModified" datetime="2022-10-10T16:39:09+08:00">2022-10-10</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -831,7 +859,18 @@ class="math inline">\(\tiny math_2\)</span>，</p>
       
           <p><font size=5></p>
 <p><font face="仿宋_GB2312"></p>
+<center>
 <h4 id="简介">简介</h4>
+</center>
+<p>尺度不变特征转换(SIFT, Scale Invariant Feature
+Transform)是图像处理领域中的一种局部特征描述算法.
+该方法于1999年由加拿大教授David
+G.Lowe提出，申请了专利，其专利属于英属哥伦比亚大学.
+SIFT专利在2020年3月17日之后到期，现在只需更新cv版本即可免费使用.</p>
+<p>SIFT算法不仅只有<strong>尺度不变性</strong>，当旋转图像，改变图像亮度，移动拍摄位置时，仍可得到较好的检测效果.</p>
+<center>
+<h4 id="性质">性质</h4>
+</center>
 <p>SIFT算法的特点有：</p>
 <ol type="1">
 <li><p>SIFT特征是图像的局部特征，其对旋转、尺度缩放、亮度变化保持不变性，对视角变化、仿射变换、噪声也保持一定程度的稳定性；</p></li>
@@ -851,6 +890,9 @@ class="math inline">\(\tiny math_2\)</span>，</p>
 <li><p>噪声</p></li>
 </ol>
 <p>SIFT算法的实质是在不同的尺度空间上查找关键点(特征点)，并计算出关键点的方向。SIFT所查找到的关键点是一些十分突出，不会因光照，仿射变换和噪音等因素而变化的点，如角点、边缘点、暗区的亮点及亮区的暗点等。</p>
+<center>
+<h4 id="步骤框架">步骤框架</h4>
+</center>
 <p>Lowe将SIFT算法分解为如下四步：</p>
 <ol type="1">
 <li><p>尺度空间极值检测：搜索所有尺度上的图像位置。通过高斯微分函数来识别潜在的对于尺度和旋转不变的兴趣点。</p></li>
@@ -860,21 +902,26 @@ class="math inline">\(\tiny math_2\)</span>，</p>
 </ol>
 <p>本文沿着Lowe的步骤，参考Rob Hess及Andrea
 Vedaldi源码，详解SIFT算法的实现过程。</p>
-<p>2.SIFT核心算法——computeKeypointsAndDescriptors
+<p>SIFT核心算法——computeKeypointsAndDescriptors
 computeKeypointsAndDescriptors就是SIFT的核心部分，可以细分为以下几步：</p>
-<p>2.1 generateBaseImage：生成基础图像（放大2倍，模糊化）</p>
-<p>2.2 computeNumberOfOctaves：计算高斯金字塔里有多少组图像</p>
-<p>2.3 generateGaussianKernels：生成构建高斯金字塔的滤波器</p>
-<p>2.4 generateGaussianImages：生成高斯金字塔</p>
-<p>2.5 generateDoGImages：生成高斯差分金字塔</p>
-<p>2.6 findScaleSpaceExtrema：寻找尺度空间的极值点</p>
-<p>2.7 removeDuplicateKeypoints：移除冗余的关键点</p>
-<p>2.8
-convertKeypointsToInputImageSize：将关键点位置转换到原图的位置</p>
-<p>2.9 generateDescriptors：关键点生成描述符，供后续相似度的计算</p>
+<ol type="1">
+<li><p>generateBaseImage：生成基础图像（放大2倍，模糊化）</p></li>
+<li><p>computeNumberOfOctaves：计算高斯金字塔里有多少组图像</p></li>
+<li><p>generateGaussianKernels：生成构建高斯金字塔的滤波器</p></li>
+<li><p>generateGaussianImages：生成高斯金字塔</p></li>
+<li><p>generateDoGImages：生成高斯差分金字塔</p></li>
+<li><p>findScaleSpaceExtrema：寻找尺度空间的极值点</p></li>
+<li><p>removeDuplicateKeypoints：移除冗余的关键点</p></li>
+<li><p>convertKeypointsToInputImageSize：将关键点位置转换到原图的位置</p></li>
+<li><p>generateDescriptors：关键点生成描述符，供后续相似度的计算</p></li>
+</ol>
+<center>
+<h4 id="过程">过程</h4>
+</center>
+<h5 id="高斯金字塔">高斯金字塔</h5>
 <p>高斯金字塔是指通过高斯模糊滤波和下采样不断地将图像的尺寸缩小，进而在金字塔中包含多个分辨率的一组图像。</p>
 <p>一般情况下，高斯金字塔的最底层为原图像，每向上一层就会通过高斯模糊滤波+下采样缩小一次图像的尺寸。
-通常情况下，图像的长与宽会缩小为原来的一半，由于每次图像的长与宽都缩小为原来的一半，图像的缩小速度非常快，因此常见的高斯金字塔的层数为3~6。</p>
+通常情况下，图像的长与宽会缩小为原来的一半，由于每次图像的长与宽都缩小为原来的一半，图像的缩小速度非常快，因此常见的高斯金字塔的层数为3-6。</p>
 <p>在OpenCV中提供了函数pyrDown()，用于生成图像的上一层高斯金字塔。
 函数pyrDown()的原型如下：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">src—输入图像</span><br><span class="line">dst—输出图像，它的宽度和高度大致为src的1/2 ，具体精确的大小由第三个参数dstsize决定。</span><br><span class="line">dstsize—目标图像的大小，默认值为Size((src.cols+1)/2, (src.rows+1)/2)，自己指定时需要满足以下条件。</span><br><span class="line"></span><br><span class="line">void cv::pyrDown(	InputArray 	src,</span><br><span class="line">					OutputArray 	dst,</span><br><span class="line">					const Size &amp; 	dstsize = Size(),</span><br><span class="line">					int 	borderType = BORDER_DEFAULT </span><br><span class="line">				)	</span><br><span class="line"></span><br></pre></td></tr></table></figure>
